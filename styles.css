@@ -24,6 +24,172 @@
      line-height: 1.6;
  }
 
+ /* FULL PAGE PARTICLE ANIMATIONS */
+ .full-page-particles {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     z-index: 9999;
+     /* Above everything but maybe below modals if any */
+     overflow: hidden;
+ }
+
+ .particle {
+     position: absolute;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ /* BUBBLES */
+ .bubble {
+     background: rgba(255, 255, 255, 0.4);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 50%;
+     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+     animation: bubbleRise linear infinite;
+ }
+
+ .bubble-pink {
+     background: radial-gradient(circle at 30% 30%, rgba(255, 62, 165, 0.4), rgba(255, 62, 165, 0.1));
+     border-color: rgba(255, 62, 165, 0.6);
+     box-shadow: inset 0 0 15px rgba(255, 62, 165, 0.3), 0 0 10px rgba(255, 62, 165, 0.2);
+ }
+
+ .bubble-blue {
+     background: radial-gradient(circle at 30% 30%, rgba(0, 183, 255, 0.4), rgba(0, 183, 255, 0.1));
+     border-color: rgba(0, 183, 255, 0.6);
+     box-shadow: inset 0 0 15px rgba(0, 183, 255, 0.3), 0 0 10px rgba(0, 183, 255, 0.2);
+ }
+
+ .bubble-yellow {
+     background: radial-gradient(circle at 30% 30%, rgba(255, 207, 36, 0.4), rgba(255, 207, 36, 0.1));
+     border-color: rgba(255, 207, 36, 0.6);
+     box-shadow: inset 0 0 15px rgba(255, 207, 36, 0.3), 0 0 10px rgba(255, 207, 36, 0.2);
+ }
+
+ .bubble-purple {
+     background: radial-gradient(circle at 30% 30%, rgba(156, 39, 176, 0.4), rgba(156, 39, 176, 0.1));
+     border-color: rgba(156, 39, 176, 0.6);
+     box-shadow: inset 0 0 15px rgba(156, 39, 176, 0.3), 0 0 10px rgba(156, 39, 176, 0.2);
+ }
+
+ @keyframes bubbleRise {
+     0% {
+         transform: translateY(110vh) translateX(0) scale(0.5);
+         opacity: 0;
+     }
+
+     10% {
+         opacity: 0.8;
+     }
+
+     90% {
+         opacity: 0.8;
+     }
+
+     100% {
+         transform: translateY(-10vh) translateX(50px) scale(1.2);
+         opacity: 0;
+     }
+ }
+
+ .pb-1 { width: 30px; height: 30px; left: 10%; animation-duration: 8s; animation-delay: 0s; }
+ .pb-2 { width: 45px; height: 45px; left: 30%; animation-duration: 12s; animation-delay: 2s; }
+ .pb-3 { width: 25px; height: 25px; left: 55%; animation-duration: 7s; animation-delay: 4s; }
+ .pb-4 { width: 50px; height: 50px; left: 75%; animation-duration: 15s; animation-delay: 1s; }
+ .pb-5 { width: 35px; height: 35px; left: 90%; animation-duration: 10s; animation-delay: 3s; }
+ .pb-6 { width: 20px; height: 20px; left: 20%; animation-duration: 9s; animation-delay: 5s; }
+ .pb-7 { width: 40px; height: 40px; left: 45%; animation-duration: 11s; animation-delay: 0.5s; }
+ .pb-8 { width: 30px; height: 30px; left: 80%; animation-duration: 13s; animation-delay: 6s; }
+
+ /* FOAM CLOUDS */
+ .foam {
+     border-radius: 50%;
+     filter: blur(25px);
+     animation: foamDrift linear infinite;
+     /* Use box-shadow to create a multi-layered cloud effect */
+     box-shadow: 
+        20px 20px 40px currentColor,
+        -20px -20px 40px currentColor,
+        40px -10px 50px currentColor,
+        -10px 30px 45px currentColor;
+ }
+
+ .foam-pink { color: rgba(255, 62, 165, 0.4); }
+ .foam-blue { color: rgba(0, 183, 255, 0.4); }
+ .foam-yellow { color: rgba(255, 207, 36, 0.4); }
+
+ @keyframes foamDrift {
+     0% {
+         transform: translateX(-20vw) translateY(20vh) scale(1);
+         opacity: 0;
+     }
+
+     20% {
+         opacity: 0.4;
+     }
+
+     80% {
+         opacity: 0.4;
+     }
+
+     100% {
+         transform: translateX(120vw) translateY(-10vh) scale(1.5);
+         opacity: 0;
+     }
+ }
+
+ .pf-1 { width: 200px; height: 180px; top: 10%; animation-duration: 25s; animation-delay: 0s; }
+ .pf-2 { width: 300px; height: 250px; top: 40%; animation-duration: 40s; animation-delay: 5s; }
+ .pf-3 { width: 250px; height: 220px; top: 70%; animation-duration: 35s; animation-delay: 12s; }
+ .pf-4 { width: 180px; height: 150px; top: 25%; animation-duration: 30s; animation-delay: 8s; }
+
+ /* SNOW FLAKES */
+ .snow {
+     background: white;
+     border-radius: 50%;
+     filter: blur(1px);
+     box-shadow: 0 0 10px white;
+     animation: snowFall linear infinite;
+ }
+
+ .snow-pink { background: #ffebf5; box-shadow: 0 0 8px #ffebf5; }
+ .snow-blue { background: #e3f2fd; box-shadow: 0 0 8px #e3f2fd; }
+ .snow-yellow { background: #fffde7; box-shadow: 0 0 8px #fffde7; }
+ .snow-mint { background: #e8f5e9; box-shadow: 0 0 8px #e8f5e9; }
+
+ @keyframes snowFall {
+     0% {
+         transform: translateY(-10vh) translateX(0);
+         opacity: 0;
+     }
+
+     10% {
+         opacity: 1;
+     }
+
+     90% {
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateY(110vh) translateX(30px);
+         opacity: 0;
+     }
+ }
+
+ .ps-1 { width: 8px; height: 8px; left: 20%; animation-duration: 10s; animation-delay: 0s; }
+ .ps-2 { width: 12px; height: 12px; left: 45%; animation-duration: 14s; animation-delay: 2s; }
+ .ps-3 { width: 6px; height: 6px; left: 70%; animation-duration: 8s; animation-delay: 5s; }
+ .ps-4 { width: 10px; height: 10px; left: 85%; animation-duration: 12s; animation-delay: 3s; }
+ .ps-5 { width: 7px; height: 7px; left: 10%; animation-duration: 11s; animation-delay: 1s; }
+ .ps-6 { width: 9px; height: 9px; left: 35%; animation-duration: 13s; animation-delay: 6s; }
+ .ps-7 { width: 11px; height: 11px; left: 60%; animation-duration: 15s; animation-delay: 4s; }
+ .ps-8 { width: 8px; height: 8px; left: 95%; animation-duration: 9s; animation-delay: 7s; }
+
  h1,
  h2,
  h3,
