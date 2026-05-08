@@ -1099,6 +1099,282 @@
     </div>
   </section>
 
+  <!-- COMPACT SPLASH CARNIVAL TIMELINE -->
+  <section class="splash-timeline">
+    <div class="container">
+      <div class="timeline-header">
+        <span class="tiny-tag">EVENT FLOW</span>
+        <h2>THE <span class="text-blue">SPLASH</span> TRAIL</h2>
+      </div>
+
+      <div class="timeline-wrap">
+        <!-- Connecting Line -->
+        <div class="timeline-path"></div>
+
+        <div class="timeline-items">
+          <!-- Step 1: Welcome -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #e8f5e9;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=400&auto=format&fit=crop"
+                  alt="Welcome Drink">
+              </div>
+              <div class="t-floating">🥥</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step">01</span>
+              <h4>WELCOME</h4>
+            </div>
+          </div>
+
+          <!-- Step 2: Mascot -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #fff9c4;">
+              <div class="t-img-circle">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-chef-cartoon-illustration_23-2150697956.jpg"
+                  alt="Mascot">
+              </div>
+              <div class="t-floating">👋</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #fbc02d;">02</span>
+              <h4>MASCOTS</h4>
+            </div>
+          </div>
+
+          <!-- Step 3: Foam -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #f3e5f5;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=400&auto=format&fit=crop"
+                  alt="Foam Party">
+              </div>
+              <div class="t-floating">☁️</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #9c27b0;">03</span>
+              <h4>FOAM</h4>
+            </div>
+          </div>
+
+          <!-- Step 4: Treasure -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #e1f5fe;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1593006526978-220087790b9b?q=80&w=400&auto=format&fit=crop"
+                  alt="Hunt">
+              </div>
+              <div class="t-floating">💎</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #0288d1;">04</span>
+              <h4>HUNT</h4>
+            </div>
+          </div>
+
+          <!-- Step 5: Pool -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #e3f2fd;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=400&auto=format&fit=crop"
+                  alt="Pool Party">
+              </div>
+              <div class="t-floating">🏊</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #2196f3;">05</span>
+              <h4>POOL</h4>
+            </div>
+          </div>
+
+          <!-- Step 6: Bubbles -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #e0f7fa;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1547619292-8816ee7cdd50?q=80&w=400&auto=format&fit=crop"
+                  alt="Bubbles">
+              </div>
+              <div class="t-floating">🫧</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #00bcd4;">06</span>
+              <h4>BUBBLES</h4>
+            </div>
+          </div>
+
+          <!-- Step 7: Food -->
+          <div class="t-node">
+            <div class="t-icon-box" style="background: #fff3e0;">
+              <div class="t-img-circle">
+                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
+                  alt="Kids Food">
+              </div>
+              <div class="t-floating">🍕</div>
+            </div>
+            <div class="t-info">
+              <span class="t-step" style="background: #ff9800;">07</span>
+              <h4>FOOD</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .splash-timeline {
+      padding: 100px 0;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .timeline-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .timeline-header h2 {
+      font-size: 50px;
+      font-weight: 950;
+      color: #0b2450;
+    }
+
+    .tiny-tag {
+      background: #ffeb3b;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .timeline-wrap {
+      position: relative;
+      max-width: 1300px;
+      /* Wider for more nodes */
+      margin: 0 auto;
+    }
+
+    .timeline-path {
+      position: absolute;
+      top: 75px;
+      left: 5%;
+      right: 5%;
+      height: 4px;
+      background: repeating-linear-gradient(90deg, #ddd, #ddd 10px, transparent 10px, transparent 20px);
+      z-index: 0;
+    }
+
+    .timeline-items {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+      gap: 15px;
+    }
+
+    .t-node {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .t-icon-box {
+      width: 140px;
+      /* SMALLER NODES */
+      height: 140px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      transition: 0.5s;
+    }
+
+    .t-node:hover .t-icon-box {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .t-img-circle {
+      width: 110px;
+      /* SMALLER NODES */
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #fff;
+    }
+
+    .t-img-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .t-floating {
+      position: absolute;
+      font-size: 30px;
+      /* Smaller Icons */
+      top: -5px;
+      right: -5px;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+      animation: tFloat 3s infinite ease-in-out;
+    }
+
+    @keyframes tFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .t-info h4 {
+      font-size: 16px;
+      /* Smaller Text */
+      font-weight: 950;
+      color: #0b2450;
+      margin: 8px 0 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .t-step {
+      display: inline-block;
+      padding: 3px 12px;
+      background: #4caf50;
+      color: white;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 1024px) {
+      .timeline-items {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .timeline-path {
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
   <!-- Master Chef Kids Menu Section (Image Match) -->
   <section class="kids-menu-board">
     <div class="menu-main-wrap">
@@ -1762,13 +2038,14 @@
     }
 
     .menu-main-wrap {
-      max-width: 1300px;
+      max-width: 1450px;
+      /* ENLARGED BOARD */
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 50px;
+      grid-template-columns: 1fr 1fr; /* 50/50 SPLIT */
+      gap: 80px; /* More breathing room */
       background: white;
-      padding: 60px;
+      padding: 70px;
       border-radius: 80px;
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
       position: relative;
@@ -1778,7 +2055,7 @@
     /* Left: Chalkboard */
     .chalkboard-frame {
       background: #1e2a1e;
-      padding: 50px 40px;
+      padding: 30px 17px;
       border: 20px solid #5d4037;
       border-radius: 15px;
       position: relative;
@@ -1786,31 +2063,24 @@
       box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7), 0 20px 40px rgba(0, 0, 0, 0.2);
     }
 
-    .chalkboard-frame::before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border: 2px dashed rgba(255, 255, 255, 0.2);
-      pointer-events: none;
-    }
-
     .chalkboard-frame h2 {
       font-family: 'Gochi Hand', cursive;
-      color: white;
-      font-size: 60px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 52px;
       text-align: center;
       line-height: 0.9;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+      margin-bottom: 45px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
+      transform: rotate(-2deg);
+      /* Natural tilt */
     }
 
     .chalk-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
+      transform: rotate(0.5deg);
+      /* Slight natural offset */
     }
 
     .chalk-item {
@@ -1818,10 +2088,22 @@
       justify-content: space-between;
       align-items: center;
       font-family: 'Gochi Hand', cursive;
-      color: white;
-      font-size: 28px;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-      padding-bottom: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 24px;
+      /* Slightly adjusted for better chalk look */
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+      padding-bottom: 8px;
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.4);
+      letter-spacing: 1px;
+    }
+
+    /* Alternating slight tilts for hand-written feel */
+    .chalk-item:nth-child(even) {
+      transform: rotate(0.3deg);
+    }
+
+    .chalk-item:nth-child(odd) {
+      transform: rotate(-0.3deg);
     }
 
     .chalk-item span:first-child {
