@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Splash Carnival - Mini Theme Park</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka+One&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Action Button -->
+    <a href="#booking-form" class="floating-book-btn">
+        <i class="fas fa-ticket-alt"></i> BOOK NOW
+    </a>
+
+
+    <!-- Creative Hero Banner Section -->
+    <header class="hero-banner creative-banner">
+
+        <!-- Image Background -->
+        <div class="bg-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop"
+            alt="Waterpark Background" class="bg-image">
+
+        <!-- Sunburst Background -->
+        <div class="sunburst"></div>
+
+        <!-- Animated Clouds -->
+        <div class="clouds">
+            <i class="fas fa-cloud cloud c1"></i>
+            <i class="fas fa-cloud cloud c2"></i>
+            <i class="fas fa-cloud cloud c3"></i>
+            <i class="fas fa-cloud cloud c4"></i>
+        </div>
+
+        <!-- Floating Bubbles -->
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
+        <!-- Parallax Floating Elements -->
+        <div class="floating-element float-1">
+            <img src="images/beach_ball.png" alt="Beach Ball">
+        </div>
+        <div class="floating-element float-2">
+            <img src="images/rubber_duck.png" alt="Rubber Duck">
+        </div>
+        <div class="floating-element float-3">
+            <img src="images/floatie.png" alt="Floatie">
+        </div>
+        <div class="floating-element float-4">
+            <i class="fas fa-star" style="color: #ffeb3b; font-size: 3rem; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));"></i>
+        </div>
+        <div class="floating-element float-5">
+            <i class="fas fa-water" style="color: #00e5ff; font-size: 4rem; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));"></i>
+        </div>
+
+        <!-- Main Content -->
+        <div class="hero-content">
+
+            <div class="premium-badge bounce-badge">
+                <i class="fas fa-crown" style="color: #ffca28;"></i> PREMIUM EVENT
+            </div>
+
+            <h1 class="main-title creative-title">
+                <span class="word-1 pop-text">KIDS</span>
+                <span class="word-2 pop-text">SPLASH</span>
+                <span class="word-3 pop-text">CARNIVAL</span>
+            </h1>
+
+            <div class="event-details creative-details">
+                <div class="detail-ticket"><i class="fas fa-map-marker-alt"></i> Wildvadi</div>
+                <div class="detail-ticket"><i class="far fa-clock"></i> 3PM – 8PM</div>
+                <div class="detail-ticket"><i class="fas fa-users"></i> Family Event</div>
+            </div>
+
+            <p class="subtitle creative-subtitle">A perfect evening of water, play, laughter and<br>unforgettable memories for kids and families!</p>
+
+            <a href="#booking-form" class="cta-button creative-cta">
+                <i class="fas fa-ticket-alt"></i> GRAB YOUR TICKETS!
+                <div class="btn-shine"></div>
+            </a>
+        </div>
+
+        <!-- Parallax Animated Waves at Bottom -->
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax-waves">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                </g>
+            </svg>
+        </div>
+
+    </header>
+
+    <!-- Curvy Divider -->
+    <div class="section-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Experience Section -->
+    <section class="experience-section reveal">
+        <!-- Floating background elements -->
+        <div class="exp-floating-elements">
+            <i class="fas fa-star" style="color: #ffca28; top: 15%; left: 10%; font-size: 1.5rem; animation-delay: 0s;"></i>
+            <i class="fas fa-star" style="color: #ffca28; top: 30%; right: 15%; font-size: 1rem; animation-delay: 1s;"></i>
+            <i class="fas fa-tint" style="color: #4fc3f7; top: 50%; left: 5%; font-size: 2rem; animation-delay: 0.5s;"></i>
+            <i class="fas fa-tint" style="color: #4fc3f7; top: 20%; right: 8%; font-size: 1.5rem; animation-delay: 1.5s;"></i>
+        </div>
+
+        <div class="experience-header text-center">
+            <div class="header-badges">
+                <i class="fas fa-tint drop-left" style="color: #1976d2;"></i>
+                <div class="section-badge exp-badge">EXPERIENCE</div>
+            </div>
+            
+            <h2 class="section-headline exp-title">
+                <span class="word-day">A Day Full of</span>
+                <span class="word-fun">Fun,</span>
+                <span class="word-water">Water</span>
+                <span class="word-and">&</span>
+                <span class="word-memories">Memories
+                    <i class="fas fa-heart small-heart"></i>
+                </span>
+            </h2>
+
+            <div class="who-badge-container">
+                <i class="fas fa-leaf leaf-left"></i>
+                <div class="section-badge who-badge">WHO IT'S FOR</div>
+                <i class="fas fa-leaf leaf-right"></i>
+            </div>
+        </div>
+
+        <div class="who-container">
+            <div class="audience-cards">
+                <!-- Heart Connector -->
+                <div class="heart-connector">
+                    <div class="heart-inner">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+
+                <!-- Kids Card -->
+                <div class="aud-card new-kids-card">
+                    <div class="card-img-wrapper kids-img-wrapper">
+                        <div class="img-dashed-border"></div>
+                        <img src="https://images.unsplash.com/photo-1545041068-071a1c97a2eb?q=80&w=600&auto=format&fit=crop" alt="Kids">
+                    </div>
+                    <div class="card-content-wrapper">
+                        <div class="card-icon kids-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="kids-title">KIDS</h3>
+                        <p>Splash, play & enjoy exciting water adventures!</p>
+                        <div class="card-badge kids-badge">
+                            <i class="fas fa-star"></i> Made for endless fun
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parents Card -->
+                <div class="aud-card new-parents-card">
+                    <div class="card-content-wrapper">
+                        <div class="card-icon parents-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3 class="parents-title">PARENTS</h3>
+                        <p>Relax, unwind & create beautiful memories with your family.</p>
+                        <div class="card-badge parents-badge">
+                            <i class="fas fa-leaf"></i> Comfort • Relaxation • Peace of Mind
+                        </div>
+                    </div>
+                    <div class="card-img-wrapper parents-img-wrapper">
+                        <div class="img-dashed-border"></div>
+                        <img src="https://images.unsplash.com/photo-1526402927237-7d9fc12d5924?q=80&w=600&auto=format&fit=crop" alt="Parents">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Now Button & Floating bottom elements -->
+        <div class="exp-action-area">
+            <a href="#booking-form" class="cta-button exp-cta-btn">
+                <i class="fas fa-ticket-alt"></i> BOOK NOW
+            </a>
+        </div>
+        
+        <!-- Floating elements -->
+        <img src="images/rubber_duck.png" alt="Duck" class="float-duck">
+        <img src="images/beach_ball.png" alt="Ball" class="float-ball">
+        
+        <!-- Wavy Waves overlay at bottom -->
+        <div class="exp-waves">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave-bg"><path fill="#e0f7fa" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,160C672,160,768,192,864,208C960,224,1056,224,1152,202.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave-mid"><path fill="#4fc3f7" fill-opacity="0.5" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,218.7C672,235,768,245,864,240C960,235,1056,213,1152,208C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave-front"><path fill="#0288d1" fill-opacity="0.8" d="M0,288L48,272C96,256,192,224,288,229.3C384,235,480,277,576,288C672,299,768,277,864,250.7C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+
+        <div class="why-container" style="position: relative; z-index: 10; padding-top: 40px;">
+            <div class="section-badge badge-center">WHY THIS EVENT</div>
+
+            <div class="features-grid">
+                <!-- Safe -->
+                <div class="feature-item hover-zoom">
+                    <div class="feature-icon icon-blue"><i class="fas fa-shield-alt"></i></div>
+                    <div class="feature-text">
+                        <h4 class="text-blue">SAFE</h4>
+                        <p>Trained staff & strict safety measures for a worry-free day.</p>
+                    </div>
+                </div>
+                <!-- Fun -->
+                <div class="feature-item hover-zoom">
+                    <div class="feature-icon icon-yellow"><i class="fas fa-star"></i></div>
+                    <div class="feature-text">
+                        <h4 class="text-orange">FUN</h4>
+                        <p>Exciting rides, games & activities for non-stop entertainment.</p>
+                    </div>
+                </div>
+                <!-- Hygienic -->
+                <div class="feature-item hover-zoom">
+                    <div class="feature-icon icon-green"><i class="fas fa-leaf"></i></div>
+                    <div class="feature-text">
+                        <h4 class="text-green">HYGIENIC</h4>
+                        <p>Clean water, sanitized facilities & regular hygiene checks.</p>
+                    </div>
+                </div>
+                <!-- Family Friendly -->
+                <div class="feature-item hover-zoom">
+                    <div class="feature-icon icon-pink"><i class="fas fa-users"></i></div>
+                    <div class="feature-text">
+                        <h4 class="text-pink">FAMILY FRIENDLY</h4>
+                        <p>Perfect for all age groups to bond, enjoy & make lasting memories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zones Section -->
+    <section class="zones-section reveal">
+        <!-- Blurred Background -->
+        <div class="zones-bg">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop"
+                alt="Waterpark">
+            <div class="zones-overlay"></div>
+        </div>
+
+        <div class="zones-header">
+            <div class="section-badge bg-pink">EXPLORE</div>
+            <h2 class="section-headline text-white">Our <span class="text-yellow">Amazing</span> Zones</h2>
+            <p class="text-white">Different zones. Endless fun. One unforgettable day!</p>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="carousel-track" id="zonesTrack">
+                <!-- Card 1 -->
+                <div class="zone-glass-card">
+                    <div class="card-bg-img">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600&auto=format&fit=crop"
+                            alt="Splash Kingdom">
+                    </div>
+                    <div class="card-gradient gradient-primary"></div>
+                    <div class="zone-icon"><i class="fas fa-water"></i></div>
+                    <div class="zone-content">
+                        <h3>Splash Kingdom 💦</h3>
+                        <p>Water slides, wave pool & splash towers for non-stop fun!</p>
+                        <a href="#booking-form" class="explore-btn btn-primary">EXPLORE ZONE <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="zone-glass-card">
+                    <div class="card-bg-img">
+                        <img src="https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?q=80&w=600&auto=format&fit=crop"
+                            alt="Action Arena">
+                    </div>
+                    <div class="card-gradient gradient-secondary"></div>
+                    <div class="zone-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="zone-content">
+                        <h3>Action Arena ⚡</h3>
+                        <p>Thrilling rides, adventure slides & high-energy attractions!</p>
+                        <a href="#booking-form" class="explore-btn btn-secondary">EXPLORE ZONE <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="zone-glass-card">
+                    <div class="card-bg-img">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600&auto=format&fit=crop"
+                            alt="Treat Street">
+                    </div>
+                    <div class="card-gradient gradient-primary"></div>
+                    <div class="zone-icon"><i class="fas fa-hamburger"></i></div>
+                    <div class="zone-content">
+                        <h3>Treat Street 🍔</h3>
+                        <p>Delicious bites, cool treats & refreshments for everyone!</p>
+                        <a href="#booking-form" class="explore-btn btn-primary">EXPLORE ZONE <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="zone-glass-card">
+                    <div class="card-bg-img">
+                        <img src="https://images.unsplash.com/photo-1526402927237-7d9fc12d5924?q=80&w=600&auto=format&fit=crop"
+                            alt="Parent Chill Bay">
+                    </div>
+                    <div class="card-gradient gradient-secondary"></div>
+                    <div class="zone-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <div class="zone-content">
+                        <h3>Parent Chill Bay 🌴</h3>
+                        <p>Relaxing pools, shaded cabanas & tranquil environment.</p>
+                        <a href="#booking-form" class="explore-btn btn-secondary">EXPLORE ZONE <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn right-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- Info Banner -->
+        <div class="info-glass-banner">
+            <div class="info-item">
+                <div class="info-icon bg-blue"><i class="fas fa-users"></i></div>
+                <div class="info-text">
+                    <h5>Safe & Secure</h5>
+                    <p>Trained staff & top safety standards</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon bg-green"><i class="fas fa-shield-alt"></i></div>
+                <div class="info-text">
+                    <h5>Clean & Hygienic</h5>
+                    <p>Regular sanitization for a worry-free experience</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon bg-pink"><i class="fas fa-heart"></i></div>
+                <div class="info-text">
+                    <h5>Family Friendly</h5>
+                    <p>Perfect for kids, parents & everyone together</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon bg-purple"><i class="fas fa-ticket-alt"></i></div>
+                <div class="info-text">
+                    <h5>All Day Fun</h5>
+                    <p>Unlimited fun with exciting rides, food & more!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curvy Divider Reverse -->
+    <div class="section-divider" style="transform: rotate(180deg); margin-top: -80px; z-index: 5;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill" style="fill: #f0f8ff;"></path>
+        </svg>
+    </div>
+
+
+
+    <!-- Premium Gallery Section -->
+    <section class="gallery-section reveal">
+        <div class="why-container">
+            <div class="gallery-header text-center">
+                <div class="section-badge bg-teal">GALLERY</div>
+                <h2 class="section-headline text-dark">Capture The <span class="text-teal">Magic</span></h2>
+                <p class="text-dark" style="margin-top:10px; font-weight:600;">Real smiles, real fun, unforgettable
+                    moments.
+                </p>
+            </div>
+        </div>
+        <div class="gallery-container">
+            <!-- Row 1: Left to Right -->
+            <div class="gallery-track track-left">
+                <!-- Items repeated to create infinite scroll effect -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1545041068-071a1c97a2eb?q=80&w=400&auto=format&fit=crop"
+                        alt="Kids in pool">
+                    <div class="gallery-overlay">
+                        <h4>Water Adventures</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1573210107297-cddb7a379124?q=80&w=400&auto=format&fit=crop"
+                        alt="Family fun">
+                    <div class="gallery-overlay">
+                        <h4>Family Bonding</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519335359739-1662c595015b?q=80&w=400&auto=format&fit=crop"
+                        alt="Splash time">
+                    <div class="gallery-overlay">
+                        <h4>Splash Time</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600985325748-3985be662a62?q=80&w=400&auto=format&fit=crop"
+                        alt="Summer fun">
+                    <div class="gallery-overlay">
+                        <h4>Summer Vibes</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?q=80&w=400&auto=format&fit=crop"
+                        alt="Water slides">
+                    <div class="gallery-overlay">
+                        <h4>Thrilling Rides</h4>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless scroll -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1545041068-071a1c97a2eb?q=80&w=400&auto=format&fit=crop"
+                        alt="Kids in pool">
+                    <div class="gallery-overlay">
+                        <h4>Water Adventures</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1573210107297-cddb7a379124?q=80&w=400&auto=format&fit=crop"
+                        alt="Family fun">
+                    <div class="gallery-overlay">
+                        <h4>Family Bonding</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519335359739-1662c595015b?q=80&w=400&auto=format&fit=crop"
+                        alt="Splash time">
+                    <div class="gallery-overlay">
+                        <h4>Splash Time</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600985325748-3985be662a62?q=80&w=400&auto=format&fit=crop"
+                        alt="Summer fun">
+                    <div class="gallery-overlay">
+                        <h4>Summer Vibes</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?q=80&w=400&auto=format&fit=crop"
+                        alt="Water slides">
+                    <div class="gallery-overlay">
+                        <h4>Thrilling Rides</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Right to Left -->
+            <div class="gallery-track track-right">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560731175-fb186595ddb6?q=80&w=400&auto=format&fit=crop"
+                        alt="Happy Kids">
+                    <div class="gallery-overlay">
+                        <h4>Happy Kids</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1533519198642-88f5d02334c9?q=80&w=400&auto=format&fit=crop"
+                        alt="Water Park Event">
+                    <div class="gallery-overlay">
+                        <h4>Pool Party</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?q=80&w=400&auto=format&fit=crop"
+                        alt="Slides">
+                    <div class="gallery-overlay">
+                        <h4>Action Arena</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=400&auto=format&fit=crop"
+                        alt="Food">
+                    <div class="gallery-overlay">
+                        <h4>Yummy Treats</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1526402927237-7d9fc12d5924?q=80&w=400&auto=format&fit=crop"
+                        alt="Parents relaxing">
+                    <div class="gallery-overlay">
+                        <h4>Parent Chill Zone</h4>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless scroll -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560731175-fb186595ddb6?q=80&w=400&auto=format&fit=crop"
+                        alt="Happy Kids">
+                    <div class="gallery-overlay">
+                        <h4>Happy Kids</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1533519198642-88f5d02334c9?q=80&w=400&auto=format&fit=crop"
+                        alt="Water Park Event">
+                    <div class="gallery-overlay">
+                        <h4>Pool Party</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?q=80&w=400&auto=format&fit=crop"
+                        alt="Slides">
+                    <div class="gallery-overlay">
+                        <h4>Action Arena</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=400&auto=format&fit=crop"
+                        alt="Food">
+                    <div class="gallery-overlay">
+                        <h4>Yummy Treats</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1526402927237-7d9fc12d5924?q=80&w=400&auto=format&fit=crop"
+                        alt="Parents relaxing">
+                    <div class="gallery-overlay">
+                        <h4>Parent Chill Zone</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Timeline Section -->
+    <div class="gallery-header text-center">
+        <div class="section-badge bg-orange">SCHEDULE</div>
+        <h2 class="section-headline text-dark">Your <span class="text-orange">Experience</span> Timeline</h2>
+        <p class="text-dark" style="margin-top:10px; font-weight:600;">Here's how your unforgettable day unfolds.</p>
+    </div>
+
+    <div class="timeline-container">
+        <div class="timeline-line">
+            <div class="timeline-progress"></div>
+        </div>
+
+        <div class="timeline-items">
+            <!-- 3 PM -->
+            <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                    <div class="time-badge">3 PM</div>
+                    <h4>Entry & Welcome</h4>
+                    <div class="time-icon"><i class="fas fa-door-open"></i></div>
+                </div>
+            </div>
+
+            <!-- 4 PM -->
+            <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                    <div class="time-badge">4 PM</div>
+                    <h4>Splash Activities</h4>
+                    <div class="time-icon"><i class="fas fa-water"></i></div>
+                </div>
+            </div>
+
+            <!-- 5 PM -->
+            <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                    <div class="time-badge">5 PM</div>
+                    <h4>Games & Fun</h4>
+                    <div class="time-icon"><i class="fas fa-gamepad"></i></div>
+                </div>
+            </div>
+
+            <!-- 7 PM -->
+            <div class="time-item">
+                <div class="time-dot"></div>
+                <div class="time-content">
+                    <div class="time-badge">7 PM</div>
+                    <h4>Live Show</h4>
+                    <div class="time-icon"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple JS for carousel and animations -->
+
+    <!-- Parents Comfort Zone Section -->
+    <section class="parents-comfort-section reveal">
+        <div class="shapes-container">
+            <div class="shape" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-duration: 15s;"></div>
+            <div class="shape" style="width: 150px; height: 150px; bottom: 10%; right: 5%; animation-duration: 20s;">
+            </div>
+            <div class="shape" style="width: 60px; height: 60px; top: 40%; right: 15%; animation-duration: 12s;"></div>
+        </div>
+        <div class="section-badge bg-purple">COMFORT</div>
+        <h2 class="section-headline text-dark">Parents Comfort Zone</h2>
+        <p class="text-dark" style="margin-top:10px; font-weight:600;">Relax, Refresh, and Rest Easy while your kids
+            enjoy the fun.</p>
+        <div class="comfort-container">
+            <div class="comfort-item">
+                <i class="fas fa-chair comfort-icon"></i>
+                <h4>Seating Lounge</h4>
+                <p>Comfortable lounge area with shade and seating for parents.</p>
+            </div>
+            <div class="comfort-item">
+                <i class="fas fa-utensils comfort-icon"></i>
+                <h4>Food & Snacks</h4>
+                <p>Healthy snacks and refreshments available on‑site.</p>
+            </div>
+            <div class="comfort-item">
+                <i class="fas fa-shield-alt comfort-icon"></i>
+                <h4>Safety Assurance</h4>
+                <p>Dedicated staff and first‑aid stations for peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional CTA Section -->
+    <section class="emotional-cta reveal" id="booking-form">
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1533519198642-88f5d02334c9?q=80&w=1600&auto=format&fit=crop"
+                alt="Splashing Memories">
+        </div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content-box">
+            <div class="cta-text-side">
+                <h2>Let’s Make <br><span class="text-yellow">Splashing</span> Memories!</h2>
+                <p>Don't let this summer pass by without a splash. Join the most exciting kids carnival in the city!</p>
+            </div>
+            <div class="cta-form-side">
+                <h3>Reserve Your Spot</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <button type="submit" class="submit-btn">GET TICKETS</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('zonesTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const cardWidth = 360; // card width + gap
+
+            if (prevBtn && nextBtn && track) {
+                console.log("Carousel initialized");
+                prevBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            } else {
+                console.error("Carousel elements missing", { prevBtn, nextBtn, track });
+            }
+
+            // Timeline & Scroll Reveal Animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-on-scroll');
+                        // For reveal class specifically
+                        if (entry.target.classList.contains('reveal')) {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.time-item, .timeline-progress, .reveal').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Immediate check for elements already in view
+            setTimeout(() => {
+                document.querySelectorAll('.reveal').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.classList.add('animate-on-scroll');
+                        el.style.opacity = "1";
+                        el.style.transform = "translateY(0)";
+                    }
+                });
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
