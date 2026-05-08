@@ -293,7 +293,7 @@
     }
 
     .section-header {
-      margin-bottom: 80px;
+      margin-bottom: 30px;
       position: relative;
       z-index: 1;
     }
@@ -869,13 +869,39 @@
       animation: bubble-float 3s infinite ease-in-out;
     }
 
-    .db-1 { width: 40px; height: 40px; top: 20%; left: -20px; }
-    .db-2 { width: 30px; height: 30px; bottom: 30%; right: -10px; animation-delay: 1s; }
-    .db-3 { width: 20px; height: 20px; top: 10%; right: 20px; animation-delay: 1.5s; }
+    .db-1 {
+      width: 40px;
+      height: 40px;
+      top: 20%;
+      left: -20px;
+    }
+
+    .db-2 {
+      width: 30px;
+      height: 30px;
+      bottom: 30%;
+      right: -10px;
+      animation-delay: 1s;
+    }
+
+    .db-3 {
+      width: 20px;
+      height: 20px;
+      top: 10%;
+      right: 20px;
+      animation-delay: 1.5s;
+    }
 
     @keyframes bubble-float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-20px) scale(1.1); }
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-20px) scale(1.1);
+      }
     }
 
     .exclusivity-content p {
@@ -887,7 +913,8 @@
 
   <section class="activities">
     <div class="girl-bubbles-decor">
-      <img src="https://images.unsplash.com/photo-1536935338218-d413d88e734d?q=80&w=600&auto=format&fit=crop" alt="Bubbles Girl">
+      <img src="https://images.unsplash.com/photo-1536935338218-d413d88e734d?q=80&w=600&auto=format&fit=crop"
+        alt="Bubbles Girl">
       <div class="decor-bubbles">
         <span class="db-1"></span>
         <span class="db-2"></span>
@@ -911,7 +938,7 @@
           <h4>Pool Games</h4>
         </div>
         <div class="activity-card">
-          <img src="./activity_foam_party_1778147946967.png" alt="Foam Party">
+          <img src="foam.png" alt="Foam Party">
           <h4>Foam Party</h4>
         </div>
         <div class="activity-card">
@@ -946,8 +973,8 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- Worth & Safety Section -->
   <section class="trust-worth-section">
@@ -983,6 +1010,50 @@
     </div>
   </section>
 
+  <!-- Experience The Magic Section -->
+  <section class="magic-trio">
+    <div class="container">
+      <div class="section-header">
+        <span class="header-badge" style="background: #00b7ff; color: #fff;">The Triple Fun</span>
+        <h2 style="color: #0b2450;">EXPERIENCE THE <span class="text-gradient">MAGIC</span></h2>
+        <p style="color: #666; font-size: 20px; font-weight: 700; margin-top: 15px;">Three unique worlds of wonder. Dive
+          into soft foam, play in the snow, and dance in bubbles!</p>
+      </div>
+
+      <div class="wavy-container">
+        <!-- Snow Panel -->
+        <div class="wavy-panel p-snow">
+          <img src="snow.png" alt="Snow" class="panel-bg">
+          <div class="cloud-header">
+            <div class="m-mascot m-penguin">🐧</div>
+            <h3 class="snow-text">SNOW</h3>
+            <span class="party-pill snow-pill">PARTY</span>
+          </div>
+        </div>
+
+        <!-- Foam Panel -->
+        <div class="wavy-panel p-foam">
+          <img src="foam.png" alt="Foam" class="panel-bg">
+          <div class="cloud-header">
+            <div class="m-mascot m-duck">🐤</div>
+            <h3 class="foam-text">FOAM</h3>
+            <span class="party-pill foam-pill">PARTY</span>
+          </div>
+        </div>
+
+        <!-- Bubbles Panel -->
+        <div class="wavy-panel p-bubbles">
+          <img src="bubbles.png" alt="Bubbles" class="panel-bg">
+          <div class="cloud-header">
+            <div class="m-mascot m-robot">🤖</div>
+            <h3 class="bubble-text">BUBBLES</h3>
+            <span class="party-pill bubble-pill">PARTY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Family Bonding Section -->
   <section class="family-bonding">
     <div class="decor-heart-bg">❤️</div>
@@ -991,8 +1062,9 @@
         <div class="bonding-content">
           <div class="header-badge" style="background: #ff3ea5; color: #fff;">Family First</div>
           <h2>PURE JOY. <br><span style="color: #0b2450;">PURE BONDING.</span></h2>
-          <p>Because the best part of the splash is the smiles you share. Create memories that your kids will cherish forever in our dedicated family play zones.</p>
-          
+          <p>Because the best part of the splash is the smiles you share. Create memories that your kids will cherish
+            forever in our dedicated family play zones.</p>
+
           <div class="bonding-cards">
             <div class="b-card">
               <div class="b-icon">👨‍👩‍👧‍👦</div>
@@ -1020,11 +1092,207 @@
         <div class="bonding-image-wrap">
           <div class="floating-heart h1">❤️</div>
           <div class="floating-heart h2">💖</div>
-          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop" alt="Family Bonding" class="bonding-main-img">
+          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop"
+            alt="Family Bonding" class="bonding-main-img">
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Master Chef Kids Menu Section (Image Match) -->
+  <section class="kids-menu-board">
+    <div class="menu-main-wrap">
+      <!-- Left: Chalkboard -->
+      <div class="chalkboard-frame">
+        <div
+          style="text-align: center; color: #ff3ea5; font-family: 'Gochi Hand'; font-size: 24px; margin-bottom: 10px;">
+          OUR</div>
+        <h2>KIDS<br><span style="color: #ffeb3b;">FOOD MENU</span></h2>
+
+        <div class="chalk-list">
+          <div class="chalk-item">
+            <span>🍕 CHEESE PIZZA</span>
+            <span class="chalk-price">SPECIAL</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍗 CHICKEN NUGGETS</span>
+            <span class="chalk-price">KIDS FAV</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍝 PASTA</span>
+            <span class="chalk-price">YUMMY</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍔 MINI BURGER</span>
+            <span class="chalk-price">BEST</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍟 FRENCH FRIES</span>
+            <span class="chalk-price">CRISPY</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍓 FRUIT CUP</span>
+            <span class="chalk-price">FRESH</span>
+          </div>
+          <div class="chalk-item">
+            <span>🥤 DRINKS</span>
+            <span class="chalk-price">COOL</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; font-family: 'Gochi Hand'; color: #ff3ea5; font-size: 20px;">
+          MADE WITH LOVE<br>JUST FOR KIDS! ❤️
+        </div>
+      </div>
+
+      <!-- Right: Auto-Scrolling Listing -->
+      <div class="menu-listing-viewport">
+        <!-- Chef Mascot (Floating) -->
+
+
+        <div class="marquee-wrapper">
+          <!-- Item 1 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
+                alt="Pizza"></div>
+            <div class="list-info-box">
+              <h4>Cheese Pizza</h4>
+              <p>Mini pizza with melty mozzarella.</p>
+            </div>
+            <div class="list-badge" style="background: #ff5252;">BEST</div>
+          </div>
+          <!-- Item 2 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1562967962-e2e02a8eb652?q=80&w=400&auto=format&fit=crop"
+                alt="Nuggets"></div>
+            <div class="list-info-box">
+              <h4>Chicken Nuggets</h4>
+              <p>Crispy bites with fresh ketchup.</p>
+            </div>
+            <div class="list-badge" style="background: #2196f3;">YUM</div>
+          </div>
+          <!-- Item 3 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&auto=format&fit=crop"
+                alt="Pasta"></div>
+            <div class="list-info-box">
+              <h4>Creamy Pasta</h4>
+              <p>Yummy pasta with mild sauce.</p>
+            </div>
+            <div class="list-badge" style="background: #4caf50;">HOT</div>
+          </div>
+          <!-- Item 4 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400&auto=format&fit=crop"
+                alt="Burger"></div>
+            <div class="list-info-box">
+              <h4>Mini Burger</h4>
+              <p>Fresh veggies and tasty sauce.</p>
+            </div>
+            <div class="list-badge" style="background: #9c27b0;">KIDS</div>
+          </div>
+          <!-- Item 5 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=400&auto=format&fit=crop"
+                alt="Fries"></div>
+            <div class="list-info-box">
+              <h4>French Fries</h4>
+              <p>Crispy golden fries with dip.</p>
+            </div>
+            <div class="list-badge" style="background: #ff3ea5;">CRISP</div>
+          </div>
+          <!-- Item 6 -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=400&auto=format&fit=crop"
+                alt="Fruits"></div>
+            <div class="list-info-box">
+              <h4>Fruit Magic</h4>
+              <p>Fresh seasonal fruit medley.</p>
+            </div>
+            <div class="list-badge" style="background: #ff9800;">FRESH</div>
+          </div>
+
+          <!-- DUPLICATED LIST FOR SEAMLESS SCROLL -->
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
+                alt="Pizza"></div>
+            <div class="list-info-box">
+              <h4>Cheese Pizza</h4>
+              <p>Mini pizza with melty mozzarella.</p>
+            </div>
+            <div class="list-badge" style="background: #ff5252;">BEST</div>
+          </div>
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1562967962-e2e02a8eb652?q=80&w=400&auto=format&fit=crop"
+                alt="Nuggets"></div>
+            <div class="list-info-box">
+              <h4>Chicken Nuggets</h4>
+              <p>Crispy bites with fresh ketchup.</p>
+            </div>
+            <div class="list-badge" style="background: #2196f3;">YUM</div>
+          </div>
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&auto=format&fit=crop"
+                alt="Pasta"></div>
+            <div class="list-info-box">
+              <h4>Creamy Pasta</h4>
+              <p>Yummy pasta with mild sauce.</p>
+            </div>
+            <div class="list-badge" style="background: #4caf50;">HOT</div>
+          </div>
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400&auto=format&fit=crop"
+                alt="Burger"></div>
+            <div class="list-info-box">
+              <h4>Mini Burger</h4>
+              <p>Fresh veggies and tasty sauce.</p>
+            </div>
+            <div class="list-badge" style="background: #9c27b0;">KIDS</div>
+          </div>
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=400&auto=format&fit=crop"
+                alt="Fries"></div>
+            <div class="list-info-box">
+              <h4>French Fries</h4>
+              <p>Crispy golden fries with dip.</p>
+            </div>
+            <div class="list-badge" style="background: #ff3ea5;">CRISP</div>
+          </div>
+          <div class="food-list-card">
+            <div class="list-img-box"><img
+                src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=400&auto=format&fit=crop"
+                alt="Fruits"></div>
+            <div class="list-info-box">
+              <h4>Fruit Magic</h4>
+              <p>Fresh seasonal fruit medley.</p>
+            </div>
+            <div class="list-badge" style="background: #ff9800;">FRESH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Decorations -->
+    <div class="container">
+      <div class="menu-decor-bottom">
+        <div class="train-toy">🚂</div>
+        <div class="kids-banner">GOOD FOOD. HAPPY KIDS! 💙</div>
+        <div class="train-toy">🖍️</div>
+      </div>
+    </div>
+  </section>
+
 
   <style>
     .trust-worth-section {
@@ -1174,12 +1442,29 @@
       animation: heart-pulse 2s infinite ease-in-out;
     }
 
-    .h1 { top: -30px; right: 20px; color: #ff3ea5; }
-    .h2 { bottom: 20px; left: -30px; color: #ff3ea5; opacity: 0.5; }
+    .h1 {
+      top: -30px;
+      right: 20px;
+      color: #ff3ea5;
+    }
+
+    .h2 {
+      bottom: 20px;
+      left: -30px;
+      color: #ff3ea5;
+      opacity: 0.5;
+    }
 
     @keyframes heart-pulse {
-      0%, 100% { transform: scale(1) rotate(0); }
-      50% { transform: scale(1.2) rotate(10deg); }
+
+      0%,
+      100% {
+        transform: scale(1) rotate(0);
+      }
+
+      50% {
+        transform: scale(1.2) rotate(10deg);
+      }
     }
 
     .decor-heart-bg {
@@ -1198,137 +1483,528 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
+
       .bonding-image-wrap {
         order: -1;
         margin-bottom: 40px;
       }
+
       .bonding-cards {
         grid-template-columns: 1fr;
       }
     }
 
-    .t-info h3 {
-      font-size: 20px;
+    /* WAVY MAGIC PANELS (IMAGE MATCH 2) */
+    .magic-trio {
+      padding: 0;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .wavy-container {
+      display: flex;
+      height: 95vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .wavy-panel {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 60px;
+      transition: 0.5s;
+    }
+
+    /* Wavy Divider SVG approach */
+    .wavy-panel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 100px;
+      height: 100%;
+      z-index: 2;
+      background-size: 100% 100%;
+      pointer-events: none;
+    }
+
+    .p-snow {
+      background: linear-gradient(180deg, #00b7ff, #0073ff);
+    }
+
+    .p-foam {
+      background: linear-gradient(180deg, #ff3ea5, #ff0080);
+    }
+
+    .p-bubbles {
+      background: linear-gradient(180deg, #9c27b0, #673ab7);
+    }
+
+    .panel-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      transition: transform 0.8s, filter 0.5s;
+      z-index: 0;
+    }
+
+    .wavy-panel:hover .panel-bg {
+      transform: scale(1.1);
+      filter: brightness(1.2) contrast(1.1);
+    }
+
+    /* Fluffy Cloud Header */
+    .cloud-header {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 100px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .cloud-header::before,
+    .cloud-header::after {
+      content: '';
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .cloud-header::before {
+      width: 80px;
+      height: 80px;
+      top: -30px;
+      left: 40px;
+    }
+
+    .cloud-header::after {
+      width: 100px;
+      height: 100px;
+      top: -40px;
+      right: 50px;
+    }
+
+    .cloud-header h3 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 54px;
       font-weight: 950;
-      color: #0b2450;
-      margin-bottom: 12px;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .snow-text {
+      color: #0073ff;
+    }
+
+    .foam-text {
+      color: #ff3ea5;
+    }
+
+    .bubble-text {
+      color: #9c27b0;
+    }
+
+    .party-pill {
+      display: inline-block;
+      padding: 5px 25px;
+      border-radius: 50px;
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .snow-pill {
+      background: #0073ff;
+    }
+
+    .foam-pill {
+      background: #ff3ea5;
+    }
+
+    .bubble-pill {
+      background: #9c27b0;
+    }
+
+    /* Feature Pills */
+    .feature-list {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 5;
+    }
+
+    .f-pill {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 12px 25px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .f-pill:hover {
+      transform: translateX(10px);
+      background: #fff;
+    }
+
+    .f-icon {
+      font-size: 22px;
+    }
+
+    .f-text {
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    .t-info p {
-      font-size: 15px;
-      color: #666;
-      font-weight: 600;
-      line-height: 1.5;
+    .snow-f-text {
+      color: #0073ff;
     }
 
-    .t-info b {
-      color: #0b2450;
-      font-weight: 800;
+    .foam-f-text {
+      color: #ff3ea5;
+    }
+
+    .bubble-f-text {
+      color: #9c27b0;
+    }
+
+    /* Mascots */
+    .m-mascot {
+      position: absolute;
+      font-size: 70px;
+      z-index: 15;
+      filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+    }
+
+    .m-penguin {
+      bottom: -20px;
+      left: -30px;
+    }
+
+    .m-duck {
+      top: -20px;
+      right: -30px;
+    }
+
+    .m-robot {
+      bottom: -20px;
+      right: -30px;
+    }
+
+    /* Floating Items */
+    .float-item {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    /* MASTER CHEF KIDS MENU (IMAGE MATCH) */
+    .kids-menu-board {
+      padding: 0px 0 120px 0;
+      background: #fdf5e6;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Lights Decor */
+    .menu-top-lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: url('https://www.transparenttextures.com/patterns/black-linen.png');
+      /* placeholder for string */
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      z-index: 5;
+    }
+
+    .light-bulb {
+      width: 40px;
+      height: 60px;
+      background: #ffeb3b;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 0 20px #ffeb3b;
+      position: relative;
+      animation: bulbGlow 2s infinite alternate;
+    }
+
+    @keyframes bulbGlow {
+      from {
+        opacity: 0.8;
+      }
+
+      to {
+        opacity: 1;
+        box-shadow: 0 0 40px #ffeb3b;
+      }
+    }
+
+    .menu-main-wrap {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 50px;
+      background: white;
+      padding: 60px;
+      border-radius: 80px;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border: 15px solid #fff;
+    }
+
+    /* Left: Chalkboard */
+    .chalkboard-frame {
+      background: #1e2a1e;
+      padding: 50px 40px;
+      border: 20px solid #5d4037;
+      border-radius: 15px;
+      position: relative;
+      background-image: url('https://www.transparenttextures.com/patterns/black-chalk.png');
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7), 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .chalkboard-frame::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+    }
+
+    .chalkboard-frame h2 {
+      font-family: 'Gochi Hand', cursive;
+      color: white;
+      font-size: 60px;
+      text-align: center;
+      line-height: 0.9;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .chalk-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .chalk-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Gochi Hand', cursive;
+      color: white;
+      font-size: 28px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+    }
+
+    .chalk-item span:first-child {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .chalk-price {
+      color: #ffeb3b;
+      font-weight: 900;
+    }
+
+    /* AUTO-SCROLLING MENU LISTING */
+    .menu-listing-viewport {
+      height: 700px;
+      /* Fixed height for scrolling */
+      overflow: hidden;
+      position: relative;
+      border-radius: 40px;
+      background: #fdfdfd;
+      border: 1px solid #f0f0f0;
+      padding: 20px;
+    }
+
+    .marquee-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: smoothScroll 30s linear infinite;
+    }
+
+    .marquee-wrapper:hover {
+      animation-play-state: paused;
+      /* Stop scrolling on hover */
+    }
+
+    @keyframes smoothScroll {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-50%);
+      }
+
+      /* Scrolls half-way to match duplicated list */
+    }
+
+    .food-list-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: 0.4s;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .food-list-card:hover {
+      transform: translateX(15px);
+      border-color: #ff3ea5;
+      box-shadow: 0 15px 40px rgba(255, 62, 165, 0.1);
+    }
+
+    .list-img-box {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .list-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .list-info-box {
+      flex: 1;
+    }
+
+    .list-info-box h4 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 22px;
+      color: #d84315;
+      margin-bottom: 5px;
+    }
+
+    .list-info-box p {
+      font-size: 14px;
+      color: #666;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .list-badge {
+      padding: 6px 15px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 900;
+      font-size: 12px;
+      text-transform: uppercase;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Chef Mascot */
+    .chef-mascot-wrap {
+      position: absolute;
+      top: -100px;
+      right: -20px;
+      width: 180px;
+      z-index: 10;
+      animation: mascotFloat 4s infinite ease-in-out;
+    }
+
+    @keyframes mascotFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(5deg);
+      }
+    }
+
+    @keyframes mascotFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(5deg);
+      }
+    }
+
+    /* Bottom Decor */
+    .menu-decor-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 50px;
+      margin-top: 60px;
+    }
+
+    .decor-item {
+      font-size: 100px;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    .kids-banner {
+      background: #00b7ff;
+      color: white;
+      padding: 15px 60px;
+      border-radius: 100px;
+      font-weight: 900;
+      font-size: 24px;
+      box-shadow: 0 10px 30px rgba(0, 183, 255, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     @media (max-width: 1024px) {
-      .trust-grid {
+      .menu-main-wrap {
         grid-template-columns: 1fr;
-        gap: 20px;
+        padding: 40px 20px;
       }
 
-      .trust-card-premium {
-        padding: 30px;
+      .food-grid-visual {
+        grid-template-columns: 1fr;
       }
     }
   </style>
-  <div class="container">
-    <div class="food-banner-area">
-
-      <div class="food-main-title">
-        <h2 class="bubbly-text">YUMMY <span>TREATS</span></h2>
-        <div class="ribbon-banner">Special Food for Little Foodies!</div>
-        <div class="sub-tags">Delicious • Healthy • Happy</div>
-      </div>
-
-    </div>
-
-    <div class="food-grid-final">
-      <div class="food-card-final">
-        <div class="food-img-wrapper orange">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&auto=format&fit=crop"
-            alt="Burger">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #ff9d00;">MINI BURGERS</h4>
-          <p>Tasty & Fun Sized!</p>
-          <div class="food-footer orange">
-            <span>🧡</span> KIDS FAVORITE
-          </div>
-        </div>
-      </div>
-      <div class="food-card-final">
-        <div class="food-img-wrapper pink">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=300&auto=format&fit=crop"
-            alt="Pizza">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #ff3ea5;">CHEESY PIZZA</h4>
-          <p>Cheese Pull Happiness!</p>
-          <div class="food-footer pink">
-            <span>💖</span> KIDS FAVORITE
-          </div>
-        </div>
-      </div>
-      <div class="food-card-final">
-        <div class="food-img-wrapper blue">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=300&auto=format&fit=crop"
-            alt="Fruits">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #00b7ff;">FRUITY CUPS</h4>
-          <p>Fresh, Juicy & Healthy!</p>
-          <div class="food-footer blue">
-            <span>💚</span> HEALTHY CHOICE
-          </div>
-        </div>
-      </div>
-      <div class="food-card-final">
-        <div class="food-img-wrapper green">
-          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?q=80&w=300&auto=format&fit=crop"
-            alt="Pops">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #2ecc71;">RAINBOW POPS</h4>
-          <p>Chill. Lick. Smile. Repeat!</p>
-          <div class="food-footer green">
-            <span>💙</span> COOL & REFRESHING
-          </div>
-        </div>
-      </div>
-      <div class="food-card-final">
-        <div class="food-img-wrapper purple">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300&auto=format&fit=crop"
-            alt="Snacks">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #9b59b6;">HEALTHY SNACKS</h4>
-          <p>Goodness in Every Bite!</p>
-          <div class="food-footer purple">
-            <span>💚</span> HEALTHY CHOICE
-          </div>
-        </div>
-      </div>
-      <div class="food-card-final">
-        <div class="food-img-wrapper yellow">
-          <img src="./kids_summer_food_1778148161644.png" alt="Mocktails">
-        </div>
-        <div class="food-details">
-          <h4 style="color: #ffcf24;">COOL MOCKTAILS</h4>
-          <p>Sip into Summer!</p>
-          <div class="food-footer yellow">
-            <span>🧡</span> KIDS FAVORITE
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Highlighted Hygiene & Safety Section -->
   <div class="safety-spotlight">
