@@ -195,7 +195,7 @@
     }
 
     .hero h1 {
-      font-size: 62px;
+      font-size: 55px;
       line-height: 1.1;
       color: #ffffff;
       margin-bottom: 25px;
@@ -292,13 +292,78 @@
     }
 
     .section-header {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-badge {
+      display: inline-block;
+      padding: 6px 20px;
+      background: var(--accent);
+      color: var(--dark);
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(255, 207, 36, 0.3);
+      transform: rotate(-2deg);
+      animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
     }
 
     .section-header h2 {
-      font-size: 48px;
-      margin-bottom: 15px;
+      font-size: clamp(36px, 8vw, 64px);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+      animation: floatHeader 3s ease-in-out infinite;
     }
+
+    @keyframes floatHeader {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+      100% { opacity: 1; transform: scale(1) rotate(-2deg); }
+    }
+
+    .text-gradient {
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+      -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+    }
+
+    .header-line {
+      width: 100px;
+      height: 8px;
+      background: var(--accent);
+      margin: 25px auto 0;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-line::before, .header-line::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--white);
+      border-radius: 50%;
+      top: -2px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-line::before { left: -25px; }
+    .header-line::after { right: -25px; }
 
     .activities-grid {
       display: grid;
@@ -762,7 +827,9 @@
   <section class="activities">
     <div class="container">
       <div class="section-header">
-        <h2>FUN-FILLED ACTIVITIES</h2>
+        <span class="header-badge">Summer Splash 2026</span>
+        <h2>FUN-FILLED <span class="text-gradient">ACTIVITIES</span></h2>
+        <div class="header-line"></div>
       </div>
       <div class="activities-grid">
         <div class="activity-card">
