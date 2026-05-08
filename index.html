@@ -289,6 +289,7 @@
       padding: 80px 0 120px;
       text-align: center;
       color: white;
+      position: relative;
     }
 
     .section-header {
@@ -837,6 +838,46 @@
       margin-bottom: 5px;
     }
 
+    .activities-wrapper {
+      position: relative;
+    }
+
+    .girl-bubbles-decor {
+      position: absolute;
+      right: 20px;
+      bottom: -60px;
+      width: 320px;
+      height: 320px;
+      z-index: 99;
+      pointer-events: none;
+    }
+
+    .girl-bubbles-decor img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      box-shadow: 0 20px 50px rgba(0, 183, 255, 0.2);
+    }
+
+    .decor-bubbles span {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: bubble-float 3s infinite ease-in-out;
+    }
+
+    .db-1 { width: 40px; height: 40px; top: 20%; left: -20px; }
+    .db-2 { width: 30px; height: 30px; bottom: 30%; right: -10px; animation-delay: 1s; }
+    .db-3 { width: 20px; height: 20px; top: 10%; right: 20px; animation-delay: 1.5s; }
+
+    @keyframes bubble-float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.1); }
+    }
+
     .exclusivity-content p {
       font-weight: 600;
       color: #666;
@@ -845,6 +886,14 @@
   </style>
 
   <section class="activities">
+    <div class="girl-bubbles-decor">
+      <img src="https://images.unsplash.com/photo-1536935338218-d413d88e734d?q=80&w=600&auto=format&fit=crop" alt="Bubbles Girl">
+      <div class="decor-bubbles">
+        <span class="db-1"></span>
+        <span class="db-2"></span>
+        <span class="db-3"></span>
+      </div>
+    </div>
     <div class="container">
       <div class="section-header">
         <span class="header-badge">Summer Splash 2026</span>
@@ -897,7 +946,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Worth & Safety Section -->
   <section class="trust-worth-section">
@@ -928,6 +978,49 @@
             <h3>ZERO HARMFUL STUFF</h3>
             <p>Eco-friendly, <b>No-Sting Water</b>. Gentle on eyes, skin, and little tummies.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Family Bonding Section -->
+  <section class="family-bonding">
+    <div class="decor-heart-bg">❤️</div>
+    <div class="container">
+      <div class="bonding-grid">
+        <div class="bonding-content">
+          <div class="header-badge" style="background: #ff3ea5; color: #fff;">Family First</div>
+          <h2>PURE JOY. <br><span style="color: #0b2450;">PURE BONDING.</span></h2>
+          <p>Because the best part of the splash is the smiles you share. Create memories that your kids will cherish forever in our dedicated family play zones.</p>
+          
+          <div class="bonding-cards">
+            <div class="b-card">
+              <div class="b-icon">👨‍👩‍👧‍👦</div>
+              <h4>Play Together</h4>
+              <p>Slides and splash zones designed for parents to join the fun.</p>
+            </div>
+            <div class="b-card">
+              <div class="b-icon">📸</div>
+              <h4>Capture Love</h4>
+              <p>Dedicated photo zones for those perfect family portraits.</p>
+            </div>
+            <div class="b-card">
+              <div class="b-icon">🤗</div>
+              <h4>Grow Closer</h4>
+              <p>Unplug from screens and connect through active, joyful play.</p>
+            </div>
+            <div class="b-card">
+              <div class="b-icon">🎈</div>
+              <h4>Celebrations</h4>
+              <p>Host the most memorable family birthdays in the city.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bonding-image-wrap">
+          <div class="floating-heart h1">❤️</div>
+          <div class="floating-heart h2">💖</div>
+          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop" alt="Family Bonding" class="bonding-main-img">
         </div>
       </div>
     </div>
@@ -992,6 +1085,126 @@
     .green-glow {
       color: #2ecc71;
       box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+    }
+
+    /* FAMILY BONDING SECTION */
+    .family-bonding {
+      padding: 120px 0;
+      background: #fff5f8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bonding-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .bonding-content h2 {
+      font-size: clamp(40px, 6vw, 60px);
+      font-weight: 900;
+      color: #ff3ea5;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    .bonding-content p {
+      font-size: 20px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .bonding-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .b-card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(255, 62, 165, 0.05);
+      border: 1px solid #ffe6f0;
+      transition: 0.3s;
+    }
+
+    .b-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(255, 62, 165, 0.1);
+      border-color: #ff3ea5;
+    }
+
+    .b-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .b-card h4 {
+      font-size: 20px;
+      color: #0b2450;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .b-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #777;
+    }
+
+    .bonding-image-wrap {
+      position: relative;
+    }
+
+    .bonding-main-img {
+      width: 100%;
+      border-radius: 40px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+      transform: rotate(-2deg);
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 60px;
+      animation: heart-pulse 2s infinite ease-in-out;
+    }
+
+    .h1 { top: -30px; right: 20px; color: #ff3ea5; }
+    .h2 { bottom: 20px; left: -30px; color: #ff3ea5; opacity: 0.5; }
+
+    @keyframes heart-pulse {
+      0%, 100% { transform: scale(1) rotate(0); }
+      50% { transform: scale(1.2) rotate(10deg); }
+    }
+
+    .decor-heart-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 600px;
+      color: #ff3ea5;
+      opacity: 0.03;
+      z-index: 0;
+    }
+
+    @media (max-width: 992px) {
+      .bonding-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .bonding-image-wrap {
+        order: -1;
+        margin-bottom: 40px;
+      }
+      .bonding-cards {
+        grid-template-columns: 1fr;
+      }
     }
 
     .t-info h3 {
