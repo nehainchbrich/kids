@@ -325,20 +325,34 @@
     }
 
     @keyframes floatHeader {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
     }
 
     @keyframes popIn {
-      0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
-      100% { opacity: 1; transform: scale(1) rotate(-2deg); }
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(-2deg);
+      }
     }
 
     .text-gradient {
       color: var(--accent);
       position: relative;
       display: inline-block;
-      -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+      -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
     }
 
     .header-line {
@@ -348,10 +362,11 @@
       margin: 25px auto 0;
       border-radius: 10px;
       position: relative;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .header-line::before, .header-line::after {
+    .header-line::before,
+    .header-line::after {
       content: '';
       position: absolute;
       width: 12px;
@@ -359,11 +374,16 @@
       background: var(--white);
       border-radius: 50%;
       top: -2px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .header-line::before { left: -25px; }
-    .header-line::after { right: -25px; }
+    .header-line::before {
+      left: -25px;
+    }
+
+    .header-line::after {
+      right: -25px;
+    }
 
     .activities-grid {
       display: grid;
@@ -866,7 +886,7 @@
           <h4>Ice Cream Bar</h4>
         </div>
         <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1536935338218-d413d88e734d?q=80&w=800&auto=format&fit=crop"
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop"
             alt="Bubble Zone">
           <h4>Bubble Zone</h4>
         </div>
@@ -1881,192 +1901,188 @@
     }
   </style>
 
-  <section class="gallery-creative">
+  <section class="gallery-creative" id="gallery">
+    <!-- Background Elements -->
+    <div class="decor-foliage leaf-tl">🌿</div>
+    <div class="decor-foliage leaf-tr">🍃</div>
+    <div class="decor-foliage leaf-bl">🌴</div>
+    <div class="decor-foliage leaf-br">🍀</div>
+    <div class="decor-star s1">⭐</div>
+    <div class="decor-star s2">✨</div>
+    <div class="decor-dot d1"></div>
+    <div class="decor-dot d2"></div>
+
     <div class="container">
-      <div class="gallery-header">
-        <h2 class="title-splash">SPLASH <span>MOMENTS</span></h2>
-        <p>Precious Memories Captured in Water!</p>
+      <div class="gallery-header-final">
+        <div class="title-wrap-final">
+          <h2 class="splash-bubbly">SPLASH <span>MOMENTS</span></h2>
+          <div class="splash-drops">💦</div>
+        </div>
+        <div class="blue-ribbon">
+          <div class="ribbon-text">PREVIOUS EVENT HIGHLIGHTS</div>
+        </div>
       </div>
 
-      <div class="gallery-scatter">
-        <div class="scatter-item g1">
-          <div class="polaroid-frame">
+      <div class="moments-grid-creative">
+        <!-- Card 1 -->
+        <div class="m-card mc-1">
+          <div class="p-frame">
+            <div class="c-icon sun-bg">☀️</div>
             <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=600&auto=format&fit=crop"
-              alt="Moments">
-            <div class="handwritten">Happy Splash!</div>
-          </div>
-        </div>
-        <div class="scatter-item g2">
-          <div class="polaroid-frame">
-            <img src="./gallery_pool_fun_1_1778148484716.png" alt="Moments">
-            <div class="handwritten">Family Fun Day</div>
-          </div>
-        </div>
-        <div class="scatter-item g3">
-          <div class="polaroid-frame">
-            <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=600&auto=format&fit=crop"
-              alt="Moments">
-            <div class="handwritten">Deep Dive!</div>
-          </div>
-        </div>
-        <div class="scatter-item g4">
-          <div class="polaroid-frame">
-            <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=600&auto=format&fit=crop"
-              alt="Moments">
-            <div class="handwritten">Smile!</div>
-          </div>
-        </div>
-        <div class="scatter-item g5">
-          <div class="polaroid-frame">
-            <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=600&auto=format&fit=crop"
-              alt="Moments">
-            <div class="handwritten">Summer Love</div>
-          </div>
-        </div>
-        <div class="scatter-item g6">
-          <div class="polaroid-frame">
-            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600&auto=format&fit=crop"
-              alt="Moments">
-            <div class="handwritten">Cool Kids!</div>
+              alt="Beach">
+            <div class="p-info">Hello Beach! <span class="h-icon">❤️</span></div>
           </div>
         </div>
 
-        <!-- Floating Props -->
-        <div class="prop sunglasses">🕶️</div>
-        <div class="prop starfish">⭐</div>
-        <div class="prop ball">🏐</div>
+        <!-- Card 2 -->
+        <div class="m-card mc-2">
+          <div class="p-frame">
+            <div class="c-icon pink-bg">🎵</div>
+            <img src="./gallery_pool_fun_1_1778148484716.png" alt="Pool">
+            <div class="p-info">Pool Party Fun! <span class="h-icon blue-h">💙</span></div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="m-card mc-3">
+          <div class="p-frame">
+            <div class="c-icon purple-bg">💜</div>
+            <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=600&auto=format&fit=crop"
+              alt="Summer">
+            <div class="p-info">Summer Love <span class="h-icon">❤️</span></div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="m-card mc-4">
+          <div class="p-frame">
+            <div class="c-icon green-bg">👓</div>
+            <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=600&auto=format&fit=crop"
+              alt="Deep">
+            <div class="p-info">Deep Dive! <span class="h-icon blue-h">💙</span></div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="m-card mc-5">
+          <div class="p-frame">
+            <div class="c-icon blue-bg">😊</div>
+            <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=600&auto=format&fit=crop"
+              alt="Smile">
+            <div class="p-info">Smile! <span class="h-icon blue-h">💙</span></div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="m-card mc-6">
+          <div class="p-frame">
+            <div class="c-icon orange-bg">⭐</div>
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600&auto=format&fit=crop"
+              alt="Kids">
+            <div class="p-info">Cool Kids! <span class="h-icon">❤️</span></div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="m-card mc-7">
+          <div class="p-frame">
+            <div class="c-icon sun-bg">🫧</div>
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop"
+              alt="Bubbles">
+            <div class="p-info">Bubble Zone <span class="h-icon blue-h">💙</span></div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="m-card mc-8">
+          <div class="p-frame">
+            <div class="c-icon pink-bg">🍦</div>
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop"
+              alt="Ice Cream">
+            <div class="p-info">Sweet Treats <span class="h-icon">❤️</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-memories-btn-wrap">
+        <a href="#" class="btn-more-final">
+          <span>📷</span> MORE MEMORIES
+        </a>
       </div>
     </div>
   </section>
 
   <style>
     .gallery-creative {
-      padding: 100px 0 150px;
-      background: #f0fbff;
+      padding: 120px 0 150px;
+      background: linear-gradient(180deg, #f0fbff 0%, #ffffff 100%);
       position: relative;
       overflow: hidden;
     }
 
-    .gallery-header {
+    .gallery-header-final {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .title-splash {
-      font-size: 52px;
-      font-weight: 900;
-      color: #0b2450;
-    }
-
-    .title-splash span {
-      color: var(--secondary);
-    }
-
-    .gallery-scatter {
+    .title-wrap-final {
       position: relative;
-      height: 700px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: inline-block;
     }
 
-    .scatter-item {
-      position: absolute;
-      transition: 0.5s;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .polaroid-frame {
-      background: white;
-      padding: 15px 15px 45px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-    }
-
-    .polaroid-frame img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 2px;
-    }
-
-    .handwritten {
+    .splash-bubbly {
       font-family: 'Fredoka', sans-serif;
-      font-size: 18px;
-      color: #555;
-      margin-top: 15px;
-      text-align: center;
-      font-weight: 600;
+      font-size: clamp(60px, 12vw, 130px);
+      color: #38b6ff;
+      line-height: 0.9;
+      text-shadow:
+        -4px -4px 0 #0b2450,
+        4px -4px 0 #0b2450,
+        -4px 4px 0 #0b2450,
+        4px 4px 0 #0b2450,
+        0px 10px 0 #0b2450;
+      position: relative;
     }
 
-    .scatter-item:hover {
-      transform: scale(1.1) rotate(0deg) !important;
-      z-index: 10;
-      box-shadow: 0 25px 50px rgba(0, 183, 255, 0.2);
+    .splash-bubbly span {
+      display: block;
+      color: #ff3ea5;
+      font-size: 0.35em;
+      letter-spacing: 12px;
+      margin-top: 5px;
+      text-shadow: none;
+      font-weight: 800;
+      position: relative;
     }
 
-    /* Positioning */
-    .g1 {
-      top: 0;
-      left: 50px;
-      transform: rotate(-8deg);
-    }
-
-    .g2 {
-      top: 50px;
-      right: 50px;
-      transform: rotate(10deg);
-    }
-
-    .g3 {
-      top: 300px;
-      left: 150px;
-      transform: rotate(5deg);
-    }
-
-    .g4 {
-      top: 250px;
-      right: 200px;
-      transform: rotate(-12deg);
-    }
-
-    .g5 {
-      bottom: 0;
-      left: 0;
-      transform: rotate(15deg);
-    }
-
-    .g6 {
-      bottom: 50px;
-      right: 0;
-      transform: rotate(-5deg);
-    }
-
-    .prop {
+    .splash-bubbly span::before,
+    .splash-bubbly span::after {
+      content: '•';
       position: absolute;
-      font-size: 60px;
-      filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
-      animation: float-slow 4s ease-in-out infinite;
+      top: 0;
+      font-size: 1.5em;
     }
 
-    .sunglasses {
-      top: 150px;
-      left: 45%;
+    .splash-bubbly span::before {
+      left: -10px;
     }
 
-    .starfish {
-      bottom: 100px;
-      left: 30%;
-      animation-delay: 1s;
+    .splash-bubbly span::after {
+      right: -10px;
     }
 
-    .ball {
-      top: 400px;
-      right: 10%;
-      animation-delay: 2s;
+    .splash-drops {
+      position: absolute;
+      font-size: 50px;
+      top: -30px;
+      right: -60px;
+      animation: drip 3s infinite ease-in-out;
     }
 
-    @keyframes float-slow {
+    @keyframes drip {
 
       0%,
       100% {
@@ -2074,29 +2090,317 @@
       }
 
       50% {
-        transform: translateY(-20px) rotate(10deg);
+        transform: translateY(-10px) rotate(15deg);
       }
     }
 
+    .blue-ribbon {
+      margin: 40px auto 0;
+      background: linear-gradient(to right, #0073ff, #00b7ff, #0073ff);
+      color: white;
+      padding: 15px 50px;
+      display: inline-block;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 20px rgba(0, 115, 255, 0.3);
+      position: relative;
+    }
+
+    .ribbon-text {
+      position: relative;
+    }
+
+    .ribbon-text::before,
+    .ribbon-text::after {
+      content: '⚡';
+      margin: 0 10px;
+      font-size: 12px;
+    }
+
+    .moments-grid-creative {
+      position: relative;
+      height: 950px;
+      margin: 40px auto 80px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .m-card {
+      position: absolute;
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .p-frame {
+      background: white;
+      padding: 15px 15px 50px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .p-frame img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .p-info {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 20px;
+      color: #0b2450;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .h-icon {
+      color: #ff3ea5;
+      font-size: 22px;
+    }
+
+    .blue-h {
+      color: #00b7ff;
+    }
+
+    .c-icon {
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      border: 4px solid #fff;
+    }
+
+    .sun-bg {
+      background: #ffeaa7 !important;
+    }
+
+    .pink-bg {
+      background: #fd79a8 !important;
+    }
+
+    .purple-bg {
+      background: #a29bfe !important;
+    }
+
+    .green-bg {
+      background: #55efc4 !important;
+    }
+
+    .blue-bg {
+      background: #74b9ff !important;
+    }
+
+    .orange-bg {
+      background: #fab1a0 !important;
+    }
+
+    /* Refined Positions for 8 Images (2 Rows of 4) */
+    .mc-1 {
+      top: 0;
+      left: 0;
+      transform: rotate(-4deg);
+    }
+
+    .mc-1 .c-icon {
+      top: -20px;
+      left: -20px;
+    }
+
+    .mc-2 {
+      top: 40px;
+      left: 25%;
+      transform: rotate(5deg);
+    }
+
+    .mc-2 .c-icon {
+      top: -20px;
+      right: -20px;
+    }
+
+    .mc-7 {
+      top: -20px;
+      left: 50%;
+      transform: rotate(-3deg);
+    }
+
+    .mc-7 .c-icon {
+      top: -20px;
+      left: -20px;
+    }
+
+    .mc-8 {
+      top: 30px;
+      right: 0;
+      transform: rotate(6deg);
+    }
+
+    .mc-8 .c-icon {
+      top: -20px;
+      right: -20px;
+    }
+
+    .mc-3 {
+      top: 480px;
+      left: 0;
+      transform: rotate(6deg);
+    }
+
+    .mc-3 .c-icon {
+      top: -20px;
+      left: -20px;
+    }
+
+    .mc-4 {
+      top: 520px;
+      left: 26%;
+      transform: rotate(-3deg);
+    }
+
+    .mc-4 .c-icon {
+      top: -20px;
+      right: -20px;
+    }
+
+    .mc-5 {
+      top: 450px;
+      left: 52%;
+      transform: rotate(4deg);
+    }
+
+    .mc-5 .c-icon {
+      top: -20px;
+      left: -20px;
+    }
+
+    .mc-6 {
+      top: 500px;
+      right: 0;
+      transform: rotate(-5deg);
+    }
+
+    .mc-6 .c-icon {
+      top: -20px;
+      right: -20px;
+    }
+
+    .m-card:hover {
+      transform: scale(1.08) rotate(0deg) !important;
+      z-index: 20;
+    }
+
+    .btn-more-final {
+      background: linear-gradient(135deg, #ff3ea5, #ff7a00);
+      color: white;
+      padding: 20px 50px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 15px 30px rgba(255, 62, 165, 0.4);
+      transition: 0.3s;
+    }
+
+    .btn-more-final:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 62, 165, 0.5);
+    }
+
+    .decor-foliage {
+      position: absolute;
+      font-size: 140px;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .leaf-tl {
+      top: -20px;
+      left: -40px;
+      transform: rotate(45deg);
+    }
+
+    .leaf-tr {
+      top: 5%;
+      right: -50px;
+      transform: rotate(-30deg);
+    }
+
+    .leaf-bl {
+      bottom: 10%;
+      left: -40px;
+    }
+
+    .leaf-br {
+      bottom: -20px;
+      right: -40px;
+    }
+
+    .decor-star {
+      position: absolute;
+      font-size: 30px;
+      color: #ffcf24;
+      opacity: 0.4;
+    }
+
+    .s1 {
+      top: 15%;
+      left: 10%;
+    }
+
+    .s2 {
+      top: 40%;
+      right: 10%;
+    }
+
+    .decor-dot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .d1 {
+      background: #38b6ff;
+      top: 20%;
+      right: 15%;
+    }
+
+    .d2 {
+      background: #ff3ea5;
+      bottom: 20%;
+      left: 15%;
+    }
+
     @media (max-width: 1024px) {
-      .gallery-scatter {
+      .moments-grid-creative {
         height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
       }
 
-      .scatter-item {
+      .m-card {
         position: relative;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
+        bottom: 0 !important;
         transform: none !important;
-      }
-
-      .prop {
-        display: none;
       }
     }
   </style>
