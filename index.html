@@ -6,731 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KIDS SUMMER SPLASH | Ultimate Pool Party</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #ff3ea5;
-      --secondary: #00b7ff;
-      --accent: #ffcf24;
-      --success: #2ecc71;
-      --dark: #0b2450;
-      --light: #f4fbff;
-      --white: #ffffff;
-      --grad-pink: linear-gradient(135deg, #ff3ea5, #ff7a00);
-      --grad-blue: linear-gradient(135deg, #00b7ff, #0073ff);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    h1,
-    h2,
-    h3,
-    .logo {
-      font-family: 'Fredoka', sans-serif;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1300px;
-      margin: auto;
-    }
-
-    /* NAVBAR */
-    nav {
-      padding: 20px 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-    }
-
-    .nav-flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--secondary);
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .logo span {
-      color: var(--primary);
-      display: block;
-      font-size: 18px;
-      letter-spacing: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 14px;
-      text-transform: uppercase;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .book-btn {
-      background: var(--accent);
-      color: var(--dark);
-      padding: 12px 25px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 20px rgba(255, 207, 36, 0.3);
-      transition: 0.3s;
-    }
-
-    .book-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 25px rgba(255, 207, 36, 0.4);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 60px 0 100px;
-      position: relative;
-      background: url('banner.png') no-repeat center center/cover;
-      min-height: 850px;
-      display: flex;
-      align-items: center;
-      border-radius: 0 0 100px 100px;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgb(0 0 0 / 90%), rgb(0 0 0 / 10%));
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 600px;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      padding: 8px 20px;
-      background: rgb(255 255 255);
-      color: var(--primary);
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .exclusivity-badge {
-      position: absolute;
-      top: -30px;
-      right: -100px;
-      background: var(--accent);
-      color: var(--dark);
-      padding: 15px;
-      border-radius: 50%;
-      width: 130px;
-      height: 130px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: 900;
-      font-size: 14px;
-      line-height: 1.2;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      transform: rotate(15deg);
-      border: 3px dashed var(--dark);
-      z-index: 5;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: rotate(15deg) translateY(0);
-      }
-
-      50% {
-        transform: rotate(15deg) translateY(-10px);
-      }
-    }
-
-    .hero h1 {
-      font-size: 55px;
-      line-height: 1.1;
-      color: #ffffff;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #ffffff;
-      margin-bottom: 35px;
-      font-weight: 500;
-    }
-
-    .hero-icons {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .hero-icon-item {
-      text-align: center;
-      width: 80px;
-    }
-
-    .icon-circle {
-      width: 50px;
-      height: 50px;
-      background: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      font-size: 20px;
-    }
-
-    .hero-icon-item p {
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: 800;
-      margin: 0;
-      color: #ffffff;
-    }
-
-    .main-cta {
-      background: var(--grad-pink);
-      color: white;
-      padding: 18px 40px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      font-size: 18px;
-      box-shadow: 0 15px 30px rgba(255, 62, 165, 0.3);
-      transition: 0.3s;
-    }
-
-    .main-cta:hover {
-      transform: scale(1.05);
-      box-shadow: 0 20px 40px rgba(255, 62, 165, 0.4);
-    }
-
-    /* WAVY DIVIDER */
-    .wave-container {
-      position: relative;
-      height: 100px;
-      width: 100%;
-      margin-top: -50px;
-      z-index: 2;
-    }
-
-    .wave {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%2300b7ff" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,181.3C672,203,768,213,864,202.7C960,192,1056,160,1152,138.7C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    /* ACTIVITIES */
-    .activities {
-      background: var(--secondary);
-      padding: 80px 0 120px;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .section-header {
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .header-badge {
-      display: inline-block;
-      padding: 6px 20px;
-      background: var(--accent);
-      color: var(--dark);
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-      box-shadow: 0 5px 15px rgba(255, 207, 36, 0.3);
-      transform: rotate(-2deg);
-      animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-    }
-
-    .section-header h2 {
-      font-size: clamp(36px, 8vw, 64px);
-      font-weight: 900;
-      color: #ffffff;
-      line-height: 1.1;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-      animation: floatHeader 3s ease-in-out infinite;
-    }
-
-    @keyframes floatHeader {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    @keyframes popIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.5) rotate(-10deg);
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1) rotate(-2deg);
-      }
-    }
-
-    .text-gradient {
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-      -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-line {
-      width: 100px;
-      height: 8px;
-      background: var(--accent);
-      margin: 25px auto 0;
-      border-radius: 10px;
-      position: relative;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-line::before,
-    .header-line::after {
-      content: '';
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background: var(--white);
-      border-radius: 50%;
-      top: -2px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-line::before {
-      left: -25px;
-    }
-
-    .header-line::after {
-      right: -25px;
-    }
-
-    .activities-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-    }
-
-    .activity-card {
-      background: white;
-      border-radius: 25px;
-      padding: 10px;
-      color: var(--dark);
-      transition: 0.4s;
-    }
-
-    .activity-card:hover {
-      transform: translateY(-15px);
-    }
-
-    .activity-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
-
-    .activity-card h4 {
-      font-size: 16px;
-      padding-bottom: 10px;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    /* FOOD SECTION */
-    .food-section {
-      padding: 100px 0;
-      background: white;
-      position: relative;
-    }
-
-    .food-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .food-header h2 {
-      font-size: 42px;
-      color: var(--dark);
-    }
-
-    .food-header p {
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .food-items {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .food-item {
-      text-align: center;
-    }
-
-    .food-img-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #fff;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      margin-bottom: 15px;
-      transition: 0.3s;
-    }
-
-    .food-item:hover .food-img-circle {
-      transform: scale(1.1) rotate(5deg);
-      border-color: var(--accent);
-    }
-
-    .food-img-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .food-item h5 {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--dark);
-    }
-
-    /* PRIVATE POOL */
-    .private-pool {
-      padding: 100px 0;
-      background: #e8f9ff;
-      border-radius: 100px 100px 0 0;
-    }
-
-    .pool-flex {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .pool-images {
-      flex: 1;
-      position: relative;
-    }
-
-    .main-pool-img {
-      width: 100%;
-      border-radius: 30px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .polaroid-overlay {
-      position: absolute;
-      bottom: -40px;
-      right: -30px;
-      width: 250px;
-      background: white;
-      padding: 15px 15px 40px;
-      border-radius: 10px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-      transform: rotate(5deg);
-    }
-
-    .polaroid-overlay img {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .pool-text {
-      flex: 1;
-    }
-
-    .pool-text h2 {
-      font-size: 44px;
-      margin-bottom: 25px;
-      color: var(--dark);
-    }
-
-    .pool-features {
-      list-style: none;
-      margin-bottom: 35px;
-    }
-
-    .pool-features li {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 12px;
-      font-weight: 600;
-      color: #555;
-    }
-
-    .pool-features li::before {
-      content: '✓';
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      background: var(--accent);
-      color: var(--dark);
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    /* TRUST BAR */
-    .trust-bar {
-      background: white;
-      padding: 40px 0;
-      display: flex;
-      justify-content: space-around;
-      border-top: 1px solid #eee;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      font-weight: 700;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .trust-icon {
-      width: 40px;
-      height: 40px;
-      background: #eef9ff;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--secondary);
-      font-size: 20px;
-    }
-
-    /* FOOTER CTA */
-    .footer-cta {
-      padding: 100px 0;
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      border-radius: 0 0 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .footer-cta h2 {
-      font-size: 52px;
-      margin-bottom: 30px;
-    }
-
-    .footer-cta .main-cta {
-      background: var(--accent);
-      color: var(--dark);
-    }
-
-    .decoration {
-      position: absolute;
-      opacity: 0.2;
-    }
-
-    /* GALLERY */
-    .gallery {
-      padding: 100px 0;
-      background: white;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 250px;
-      gap: 20px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .item-tall {
-      grid-row: span 2;
-    }
-
-    .item-wide {
-      grid-column: span 2;
-    }
-
-    /* DECORATIVE ELEMENTS */
-    .bubble {
-      position: absolute;
-      background: rgba(0, 183, 255, 0.1);
-      border-radius: 50%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .b1 {
-      width: 100px;
-      height: 100px;
-      top: 10%;
-      left: 5%;
-    }
-
-    .b2 {
-      width: 150px;
-      height: 150px;
-      top: 30%;
-      right: 5%;
-    }
-
-    .b3 {
-      width: 80px;
-      height: 80px;
-      bottom: 10%;
-      left: 10%;
-    }
-
-    .b4 {
-      width: 120px;
-      height: 120px;
-      bottom: 20%;
-      right: 10%;
-    }
-
-    @media (max-width: 1024px) {
-      .hero h1 {
-        font-size: 56px;
-      }
-
-      .activities-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .pool-flex {
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 120px;
-        text-align: center;
-      }
-
-      .hero-icons {
-        justify-content: center;
-      }
-
-      .activities-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .trust-bar {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        padding: 40px 10%;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -756,9 +36,9 @@
       <div class="hero-content">
         <div class="hero-tag">The Best Splash Carnival</div>
         <div class="exclusivity-badge">ONLY FOR<br>KIDS & PARENTS</div>
-        <h1>MAKE THIS <span> SUMMER</span><br>UNFORGETTABLE!</h1>
-        <p>An exclusive <b>Kids & Parents Only</b> water adventure! Join us for a day of unlimited fun and happy
-          memories in a space designed solely for families.</p>
+        <h1>FIRST <span> POOL PARTY</span><br>IN NCR FOR KIDS & PARENTS </h1>
+        <p>Turn Their Summer Holidays into a Splash-tastic Celebration with <b>Pool Fun,<br></b> <b>Games</b> & <b>Tasty
+            Treats</b></p>
 
         <div class="hero-icons">
           <div class="hero-icon-item">
@@ -797,127 +77,23 @@
       <div class="exclusivity-content">
         <div class="exclusivity-icon">🔐</div>
         <div>
-          <h3>STRICTLY FOR KIDS & PARENTS</h3>
-          <p>For safety and maximum comfort, entry is exclusive to children and their accompanying parents. A dedicated
-            space where families can be families.</p>
+          <h3>A Day to Pause, Play & Spend Quality Time with Your Kids </h3>
+          <p>Taking a break from busy schedules to laugh, play, create memories, and enjoy meaningful quality time with
+            your kids.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <style>
-    .exclusivity-bar {
-      background: #fff;
-      padding: 30px 0;
-      border-bottom: 2px dashed var(--secondary);
-    }
 
-    .exclusivity-content {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      justify-content: center;
-      text-align: left;
-    }
-
-    .exclusivity-icon {
-      font-size: 40px;
-      background: var(--light);
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-      border: 2px solid var(--secondary);
-    }
-
-    .exclusivity-content h3 {
-      color: var(--primary);
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .activities-wrapper {
-      position: relative;
-    }
-
-    .girl-bubbles-decor {
-      position: absolute;
-      right: 20px;
-      bottom: -60px;
-      width: 320px;
-      height: 320px;
-      z-index: 99;
-      pointer-events: none;
-    }
-
-    .girl-bubbles-decor img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 10px solid #fff;
-      box-shadow: 0 20px 50px rgba(0, 183, 255, 0.2);
-    }
-
-    .decor-bubbles span {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      border-radius: 50%;
-      animation: bubble-float 3s infinite ease-in-out;
-    }
-
-    .db-1 {
-      width: 40px;
-      height: 40px;
-      top: 20%;
-      left: -20px;
-    }
-
-    .db-2 {
-      width: 30px;
-      height: 30px;
-      bottom: 30%;
-      right: -10px;
-      animation-delay: 1s;
-    }
-
-    .db-3 {
-      width: 20px;
-      height: 20px;
-      top: 10%;
-      right: 20px;
-      animation-delay: 1.5s;
-    }
-
-    @keyframes bubble-float {
-
-      0%,
-      100% {
-        transform: translateY(0) scale(1);
-      }
-
-      50% {
-        transform: translateY(-20px) scale(1.1);
-      }
-    }
-
-    .exclusivity-content p {
-      font-weight: 600;
-      color: #666;
-      max-width: 700px;
-    }
-  </style>
 
   <!-- Experience The Magic Section -->
   <section class="magic-trio">
     <div class="container">
       <div class="section-header">
-        <span class="header-badge" style="background: #00b7ff; color: #fff;">The Triple Fun</span>
-        <h2 style="color: #0b2450;">EXPERIENCE THE <span class="text-gradient">MAGIC</span></h2>
-        <p style="color: #666; font-size: 20px; font-weight: 700; margin-top: 15px;">Three unique worlds of wonder. Dive
+        <span class="header-badge blue-badge">The Triple Fun</span>
+        <h2 class="dark-text">SNOW . <span class="text-gradient">FOAM . </span> BUBBLES</h2>
+        <p class="sub-header-p">Three unique worlds of wonder. Dive
           into soft foam, play in the snow, and dance in bubbles!</p>
       </div>
 
@@ -963,8 +139,8 @@
         <div class="trust-card-premium">
           <div class="t-icon-box blue-glow">🛡️</div>
           <div class="t-info">
-            <h3>TOTALLY SAFE</h3>
-            <p>100% Child-Safe zones with <b>Certified Lifeguards</b> on duty every second.</p>
+            <h3>Safety First </h3>
+            <p>A completely safe space where kids and parents can enjoy without any worries.</p>
           </div>
         </div>
 
@@ -972,8 +148,8 @@
         <div class="trust-card-premium">
           <div class="t-icon-box gold-glow">💰</div>
           <div class="t-info">
-            <h3>TOTALLY WORTH IT</h3>
-            <p>The <b>Best Value Weekend</b> in town. Unlimited slides & smiles for one ticket!</p>
+            <h3>No Chemicals in the Water </h3>
+            <p>Clean, natural water that’s gentle and safe for everyone to splash in.</p>
           </div>
         </div>
 
@@ -981,8 +157,8 @@
         <div class="trust-card-premium">
           <div class="t-icon-box green-glow">🍃</div>
           <div class="t-info">
-            <h3>ZERO HARMFUL STUFF</h3>
-            <p>Eco-friendly, <b>No-Sting Water</b>. Gentle on eyes, skin, and little tummies.</p>
+            <h3>Clean & Hygienic Pool Area </h3>
+            <p>A well-maintained, fresh, and hygienic pool area for a healthy fun experience.</p>
           </div>
         </div>
       </div>
@@ -1002,60 +178,81 @@
     <div class="container">
       <div class="section-header">
         <span class="header-badge">Summer Splash 2026</span>
-        <h2>FUN-FILLED <span class="text-gradient">ACTIVITIES</span></h2>
+        <h2>Hands-On Fun for <span class="text-gradient">Kids & Parents</span></h2>
         <div class="header-line"></div>
       </div>
-      <div class="activities-grid">
-        <div class="activity-card">
-          <img src="./activity_water_slides_1778147623768.png" alt="Water Slides">
-          <h4>Water Slides</h4>
+      <div class="activities-decor">
+        <div class="blob-decor blob-1">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFCF24"
+              d="M44.7,-76.4C58.1,-69.2,70.1,-58.5,77.4,-45.4C84.7,-32.4,87.3,-16.2,85.2,-1.2C83.1,13.8,76.3,27.6,67.7,40.1C59.1,52.6,48.7,63.8,36.1,70.1C23.5,76.4,8.7,77.8,-5.5,76.9C-19.8,75.9,-33.5,72.6,-45.5,65.6C-57.5,58.6,-67.7,47.9,-74.6,35.4C-81.5,22.9,-85,8.6,-83.4,-5.1C-81.8,-18.8,-75.1,-32,-65.8,-43.3C-56.5,-54.6,-44.6,-64,-31.6,-71.4C-18.6,-78.8,-4.5,-84.2,10.1,-82.5C24.7,-80.8,44.7,-76.4Z"
+              transform="translate(100 100)" />
+          </svg>
         </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop"
-            alt="Pool Games">
-          <h4>Pool Games</h4>
-        </div>
-        <div class="activity-card">
-          <img src="foam.png" alt="Foam Party">
-          <h4>Foam Party</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800&auto=format&fit=crop"
-            alt="Treasure Hunt">
-          <h4>Treasure Hunt</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=800&auto=format&fit=crop"
-            alt="Dance & Music">
-          <h4>Dance & Music</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
-            alt="Garden Games">
-          <h4>Garden Games</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop"
-            alt="Ice Cream Bar">
-          <h4>Ice Cream Bar</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop"
-            alt="Bubble Zone">
-          <h4>Bubble Zone</h4>
-        </div>
-        <div class="activity-card">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
-            alt="Snack Corner">
-          <h4>Snack Corner</h4>
+        <div class="blob-decor blob-2">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FF3EA5"
+              d="M38.1,-64.2C50.3,-58.1,61.7,-49.6,69.5,-38.4C77.4,-27.1,81.7,-13.6,81.4,-0.2C81.1,13.2,76.1,26.4,68.3,37.6C60.5,48.8,50,58,37.9,64.4C25.8,70.8,12.9,74.5,0.4,73.8C-12.1,73.1,-24.1,68,-35.1,61C-46.1,53.9,-56.1,44.8,-63.3,33.8C-70.5,22.8,-74.9,9.8,-74.3,-3.1C-73.7,-16.1,-68,-29,-59.5,-39.9C-51,-50.8,-39.6,-59.7,-27.4,-65.8C-15.2,-71.9,-2.1,-75.2,10.1,-71.6C22.3,-68,38.1,-64.2Z"
+              transform="translate(100 100)" />
+          </svg>
         </div>
       </div>
+
+      <div class="activities-grid">
+        <div class="activity-card">
+          <div class="act-icon">🏐</div>
+          <img src="./activity_water_slides_1778147623768.png" alt="Water Slides">
+          <h4>Pool Volleyball </h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">🎤</div>
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop"
+            alt="Pool Games">
+          <h4>Pool side Kareokay</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">🫧</div>
+          <img src="foam.png" alt="Foam Party">
+          <h4>Foam Party Fiesta</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">✨</div>
+          <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800&auto=format&fit=crop"
+            alt="Treasure Hunt">
+          <h4>Bubble Blast Fun Zone</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">❄️</div>
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=800&auto=format&fit=crop"
+            alt="Dance & Music">
+          <h4>Snow Dance Celebration</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">👨‍🍳</div>
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+            alt="Garden Games">
+          <h4>Mini Chef Cooking Adventure</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">🎨</div>
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop"
+            alt="Ice Cream Bar">
+          <h4>Creative Art & Craft Corner</h4>
+        </div>
+        <div class="activity-card">
+          <div class="act-icon">🛟</div>
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop"
+            alt="Bubble Zone">
+          <h4>Float on rentals</h4>
+        </div>
+      </div>
+
     </div>
     </div>
   </section>
 
   <!-- Family Bonding Section -->
-  <section class="family-bonding">
+  <!-- <section class="family-bonding">
     <div class="decor-heart-bg">❤️</div>
     <div class="container">
       <div class="bonding-grid">
@@ -1097,310 +294,34 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- COMPACT SPLASH CARNIVAL TIMELINE -->
-  <section class="splash-timeline">
-    <div class="container">
-      <div class="timeline-header">
-        <span class="tiny-tag">EVENT FLOW</span>
-        <h2>THE <span class="text-blue">SPLASH</span> TRAIL</h2>
-      </div>
 
-      <div class="timeline-wrap">
-        <!-- Connecting Line -->
-        <div class="timeline-path"></div>
 
-        <div class="timeline-items">
-          <!-- Step 1: Welcome -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #e8f5e9;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=400&auto=format&fit=crop"
-                  alt="Welcome Drink">
-              </div>
-              <div class="t-floating">🥥</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step">01</span>
-              <h4>WELCOME</h4>
-            </div>
-          </div>
-
-          <!-- Step 2: Mascot -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #fff9c4;">
-              <div class="t-img-circle">
-                <img src="https://img.freepik.com/free-vector/hand-drawn-chef-cartoon-illustration_23-2150697956.jpg"
-                  alt="Mascot">
-              </div>
-              <div class="t-floating">👋</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #fbc02d;">02</span>
-              <h4>MASCOTS</h4>
-            </div>
-          </div>
-
-          <!-- Step 3: Foam -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #f3e5f5;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=400&auto=format&fit=crop"
-                  alt="Foam Party">
-              </div>
-              <div class="t-floating">☁️</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #9c27b0;">03</span>
-              <h4>FOAM</h4>
-            </div>
-          </div>
-
-          <!-- Step 4: Treasure -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #e1f5fe;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1593006526978-220087790b9b?q=80&w=400&auto=format&fit=crop"
-                  alt="Hunt">
-              </div>
-              <div class="t-floating">💎</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #0288d1;">04</span>
-              <h4>HUNT</h4>
-            </div>
-          </div>
-
-          <!-- Step 5: Pool -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #e3f2fd;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=400&auto=format&fit=crop"
-                  alt="Pool Party">
-              </div>
-              <div class="t-floating">🏊</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #2196f3;">05</span>
-              <h4>POOL</h4>
-            </div>
-          </div>
-
-          <!-- Step 6: Bubbles -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #e0f7fa;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1547619292-8816ee7cdd50?q=80&w=400&auto=format&fit=crop"
-                  alt="Bubbles">
-              </div>
-              <div class="t-floating">🫧</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #00bcd4;">06</span>
-              <h4>BUBBLES</h4>
-            </div>
-          </div>
-
-          <!-- Step 7: Food -->
-          <div class="t-node">
-            <div class="t-icon-box" style="background: #fff3e0;">
-              <div class="t-img-circle">
-                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
-                  alt="Kids Food">
-              </div>
-              <div class="t-floating">🍕</div>
-            </div>
-            <div class="t-info">
-              <span class="t-step" style="background: #ff9800;">07</span>
-              <h4>FOOD</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .splash-timeline {
-      padding: 120px 0;
-      background: #0b2450;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .timeline-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .timeline-header h2 {
-      font-size: 56px;
-      font-weight: 950;
-      color: #ffffff;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .tiny-tag {
-      background: #ffeb3b;
-      padding: 5px 15px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .timeline-wrap {
-      position: relative;
-      max-width: 1300px;
-      /* Wider for more nodes */
-      margin: 0 auto;
-    }
-
-    .timeline-path {
-      position: absolute;
-      top: 75px;
-      left: 5%;
-      right: 5%;
-      height: 4px;
-      background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 10px, transparent 10px, transparent 20px);
-      z-index: 0;
-    }
-
-    .timeline-items {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1;
-      gap: 15px;
-    }
-
-    .t-node {
-      flex: 1;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .t-icon-box {
-      width: 140px;
-      /* SMALLER NODES */
-      height: 140px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-bottom: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-      transition: 0.5s;
-    }
-
-    .t-node:hover .t-icon-box {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-    }
-
-    .t-img-circle {
-      width: 110px;
-      /* SMALLER NODES */
-      height: 110px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #fff;
-    }
-
-    .t-img-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .t-floating {
-      position: absolute;
-      font-size: 30px;
-      /* Smaller Icons */
-      top: -5px;
-      right: -5px;
-      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
-      animation: tFloat 3s infinite ease-in-out;
-    }
-
-    @keyframes tFloat {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-12px);
-      }
-    }
-
-    .t-info h4 {
-      font-size: 16px;
-      /* Smaller Text */
-      font-weight: 950;
-      color: #ffffff;
-      margin: 12px 0 0;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .t-step {
-      display: inline-block;
-      padding: 3px 12px;
-      background: #4caf50;
-      color: white;
-      border-radius: 50px;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    @media (max-width: 1024px) {
-      .timeline-items {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-      }
-
-      .timeline-path {
-        left: 50%;
-        width: 4px;
-        height: 100%;
-        top: 0;
-        transform: translateX(-50%);
-      }
-    }
-  </style>
 
   <!-- Master Chef Kids Menu Section (Image Match) -->
   <section class="kids-menu-board">
     <div class="menu-main-wrap">
       <!-- Left: Chalkboard -->
       <div class="chalkboard-frame">
-        <div
-          style="text-align: center; color: #ff3ea5; font-family: 'Gochi Hand'; font-size: 24px; margin-bottom: 10px;">
-          OUR</div>
-        <h2>KIDS<br><span style="color: #ffeb3b;">FOOD MENU</span></h2>
+        <div class="menu-label">OUR</div>
+        <h2>Bachaa Party<br><span style="color: #ffeb3b;">Treats</span></h2>
 
         <div class="chalk-list">
           <div class="chalk-item">
-            <span>🍕 CHEESE PIZZA</span>
+            <span>🍕 Mini Pizza Bites</span>
             <span class="chalk-price">SPECIAL</span>
           </div>
           <div class="chalk-item">
-            <span>🍗 CHICKEN NUGGETS</span>
-            <span class="chalk-price">KIDS FAV</span>
-          </div>
-          <div class="chalk-item">
-            <span>🍝 PASTA</span>
+            <span>🍝 Mini Veg Sandwiches</span>
             <span class="chalk-price">YUMMY</span>
           </div>
           <div class="chalk-item">
-            <span>🍔 MINI BURGER</span>
+            <span>🍝 Veg Nuggets & Potato Smileys</span>
+            <span class="chalk-price">YUMMY</span>
+          </div>
+          <div class="chalk-item">
+            <span>🍔 Ice Cream Scoops</span>
             <span class="chalk-price">BEST</span>
           </div>
           <div class="chalk-item">
@@ -1408,16 +329,16 @@
             <span class="chalk-price">CRISPY</span>
           </div>
           <div class="chalk-item">
-            <span>🍓 FRUIT CUP</span>
+            <span>🍓 Fresh FRUIT CUP</span>
             <span class="chalk-price">FRESH</span>
           </div>
           <div class="chalk-item">
-            <span>🥤 DRINKS</span>
+            <span>🥤 Fresh Juices & Milkshakes</span>
             <span class="chalk-price">COOL</span>
           </div>
         </div>
 
-        <div style="margin-top: 30px; text-align: center; font-family: 'Gochi Hand'; color: #ff3ea5; font-size: 20px;">
+        <div class="menu-footer-text">
           MADE WITH LOVE<br>JUST FOR KIDS! ❤️
         </div>
       </div>
@@ -1434,30 +355,21 @@
                 src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
                 alt="Pizza"></div>
             <div class="list-info-box">
-              <h4>Cheese Pizza</h4>
-              <p>Mini pizza with melty mozzarella.</p>
+              <h4>Mini Pizza Bites</h4>
+              <p>Cheesy mini treats loaded with delicious flavors.</p>
             </div>
             <div class="list-badge" style="background: #ff5252;">BEST</div>
           </div>
           <!-- Item 2 -->
-          <div class="food-list-card">
-            <div class="list-img-box"><img
-                src="https://images.unsplash.com/photo-1562967962-e2e02a8eb652?q=80&w=400&auto=format&fit=crop"
-                alt="Nuggets"></div>
-            <div class="list-info-box">
-              <h4>Chicken Nuggets</h4>
-              <p>Crispy bites with fresh ketchup.</p>
-            </div>
-            <div class="list-badge" style="background: #2196f3;">YUM</div>
-          </div>
+
           <!-- Item 3 -->
           <div class="food-list-card">
             <div class="list-img-box"><img
                 src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&auto=format&fit=crop"
                 alt="Pasta"></div>
             <div class="list-info-box">
-              <h4>Creamy Pasta</h4>
-              <p>Yummy pasta with mild sauce.</p>
+              <h4>Veg Nuggets & Potato Smileys </h4>
+              <p>Crispy, golden bites made for happy little smiles.</p>
             </div>
             <div class="list-badge" style="background: #4caf50;">HOT</div>
           </div>
@@ -1467,8 +379,8 @@
                 src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400&auto=format&fit=crop"
                 alt="Burger"></div>
             <div class="list-info-box">
-              <h4>Mini Burger</h4>
-              <p>Fresh veggies and tasty sauce.</p>
+              <h4>Mini Veg Sandwiches </h4>
+              <p>Soft, fresh & filled with crunchy veggie goodness.</p>
             </div>
             <div class="list-badge" style="background: #9c27b0;">KIDS</div>
           </div>
@@ -1479,7 +391,7 @@
                 alt="Fries"></div>
             <div class="list-info-box">
               <h4>French Fries</h4>
-              <p>Crispy golden fries with dip.</p>
+              <p>Hot, crispy fries loved by every tiny foodie</p>
             </div>
             <div class="list-badge" style="background: #ff3ea5;">CRISP</div>
           </div>
@@ -1489,10 +401,10 @@
                 src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=400&auto=format&fit=crop"
                 alt="Fruits"></div>
             <div class="list-info-box">
-              <h4>Fruit Magic</h4>
-              <p>Fresh seasonal fruit medley.</p>
+              <h4>Fresh Fruit Cups</h4>
+              <p>Colorful, juicy fruits served fresh and healthy.</p>
             </div>
-            <div class="list-badge" style="background: #ff9800;">FRESH</div>
+            <div class="list-badge badge-orange">FRESH</div>
           </div>
 
           <!-- DUPLICATED LIST FOR SEAMLESS SCROLL -->
@@ -1501,40 +413,31 @@
                 src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400&auto=format&fit=crop"
                 alt="Pizza"></div>
             <div class="list-info-box">
-              <h4>Cheese Pizza</h4>
-              <p>Mini pizza with melty mozzarella.</p>
+              <h4>Mini Pizza Bites</h4>
+              <p>Cheesy mini treats loaded with delicious flavors.</p>
             </div>
-            <div class="list-badge" style="background: #ff5252;">BEST</div>
+            <div class="list-badge badge-red">BEST</div>
           </div>
-          <div class="food-list-card">
-            <div class="list-img-box"><img
-                src="https://images.unsplash.com/photo-1562967962-e2e02a8eb652?q=80&w=400&auto=format&fit=crop"
-                alt="Nuggets"></div>
-            <div class="list-info-box">
-              <h4>Chicken Nuggets</h4>
-              <p>Crispy bites with fresh ketchup.</p>
-            </div>
-            <div class="list-badge" style="background: #2196f3;">YUM</div>
-          </div>
+
           <div class="food-list-card">
             <div class="list-img-box"><img
                 src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&auto=format&fit=crop"
                 alt="Pasta"></div>
             <div class="list-info-box">
-              <h4>Creamy Pasta</h4>
-              <p>Yummy pasta with mild sauce.</p>
+              <h4>Mini Veg Sandwiches</h4>
+              <p>Soft, fresh & filled with crunchy veggie goodness.</p>
             </div>
-            <div class="list-badge" style="background: #4caf50;">HOT</div>
+            <div class="list-badge badge-green">HOT</div>
           </div>
           <div class="food-list-card">
             <div class="list-img-box"><img
                 src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=400&auto=format&fit=crop"
                 alt="Burger"></div>
             <div class="list-info-box">
-              <h4>Mini Burger</h4>
-              <p>Fresh veggies and tasty sauce.</p>
+              <h4>Ice Cream Scoops</h4>
+              <p>Cool, creamy scoops of happiness in every bite.</p>
             </div>
-            <div class="list-badge" style="background: #9c27b0;">KIDS</div>
+            <div class="list-badge badge-purple">KIDS</div>
           </div>
           <div class="food-list-card">
             <div class="list-img-box"><img
@@ -1542,19 +445,19 @@
                 alt="Fries"></div>
             <div class="list-info-box">
               <h4>French Fries</h4>
-              <p>Crispy golden fries with dip.</p>
+              <p>Hot, crispy fries loved by every tiny foodie</p>
             </div>
-            <div class="list-badge" style="background: #ff3ea5;">CRISP</div>
+            <div class="list-badge badge-pink">CRISP</div>
           </div>
           <div class="food-list-card">
             <div class="list-img-box"><img
                 src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=400&auto=format&fit=crop"
                 alt="Fruits"></div>
             <div class="list-info-box">
-              <h4>Fruit Magic</h4>
-              <p>Fresh seasonal fruit medley.</p>
+              <h4>Fresh Fruit Cups</h4>
+              <p>Colorful, juicy fruits served fresh and healthy.</p>
             </div>
-            <div class="list-badge" style="background: #ff9800;">FRESH</div>
+            <div class="list-badge badge-orange">FRESH</div>
           </div>
         </div>
       </div>
@@ -1564,732 +467,14 @@
     <div class="container">
       <div class="menu-decor-bottom">
         <div class="train-toy">🚂</div>
-        <div class="kids-banner">GOOD FOOD. HAPPY KIDS! 💙</div>
+        <div class="kids-banner">Eat Good. Feel Good. 💙</div>
         <div class="train-toy">🖍️</div>
       </div>
     </div>
   </section>
 
 
-  <style>
-    .trust-worth-section {
-      padding: 60px 0;
-      background: #f8fbff;
-      border-top: 1px solid #eef5ff;
-      border-bottom: 1px solid #eef5ff;
-    }
 
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .trust-card-premium {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
-      transition: 0.3s;
-      border: 1px solid #f0f0f0;
-    }
-
-    .trust-card-premium:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 183, 255, 0.1);
-      border-color: #00b7ff;
-    }
-
-    .t-icon-box {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 35px;
-      margin-bottom: 25px;
-      background: white;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .blue-glow {
-      color: #00b7ff;
-      box-shadow: 0 10px 20px rgba(0, 183, 255, 0.2);
-    }
-
-    .gold-glow {
-      color: #ffcf24;
-      box-shadow: 0 10px 20px rgba(255, 207, 36, 0.2);
-    }
-
-    .green-glow {
-      color: #2ecc71;
-      box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
-    }
-
-    /* FAMILY BONDING SECTION */
-    .family-bonding {
-      padding: 120px 0;
-      background: #fff5f8;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bonding-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .bonding-content h2 {
-      font-size: clamp(40px, 6vw, 60px);
-      font-weight: 900;
-      color: #ff3ea5;
-      line-height: 1.1;
-      margin-bottom: 25px;
-    }
-
-    .bonding-content p {
-      font-size: 20px;
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      font-weight: 600;
-    }
-
-    .bonding-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .b-card {
-      background: white;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(255, 62, 165, 0.05);
-      border: 1px solid #ffe6f0;
-      transition: 0.3s;
-    }
-
-    .b-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(255, 62, 165, 0.1);
-      border-color: #ff3ea5;
-    }
-
-    .b-icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .b-card h4 {
-      font-size: 20px;
-      color: #0b2450;
-      margin-bottom: 10px;
-      font-weight: 800;
-    }
-
-    .b-card p {
-      font-size: 15px;
-      margin-bottom: 0;
-      color: #777;
-    }
-
-    .bonding-image-wrap {
-      position: relative;
-    }
-
-    .bonding-main-img {
-      width: 100%;
-      border-radius: 40px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-      transform: rotate(-2deg);
-    }
-
-    .floating-heart {
-      position: absolute;
-      font-size: 60px;
-      animation: heart-pulse 2s infinite ease-in-out;
-    }
-
-    .h1 {
-      top: -30px;
-      right: 20px;
-      color: #ff3ea5;
-    }
-
-    .h2 {
-      bottom: 20px;
-      left: -30px;
-      color: #ff3ea5;
-      opacity: 0.5;
-    }
-
-    @keyframes heart-pulse {
-
-      0%,
-      100% {
-        transform: scale(1) rotate(0);
-      }
-
-      50% {
-        transform: scale(1.2) rotate(10deg);
-      }
-    }
-
-    .decor-heart-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 600px;
-      color: #ff3ea5;
-      opacity: 0.03;
-      z-index: 0;
-    }
-
-    @media (max-width: 992px) {
-      .bonding-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .bonding-image-wrap {
-        order: -1;
-        margin-bottom: 40px;
-      }
-
-      .bonding-cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* WAVY MAGIC PANELS (IMAGE MATCH 2) */
-    .magic-trio {
-      padding: 0;
-      background: #fff;
-      overflow: hidden;
-    }
-
-    .wavy-container {
-      display: flex;
-      height: 95vh;
-      width: 100%;
-      position: relative;
-    }
-
-    .wavy-panel {
-      flex: 1;
-      height: 100%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-bottom: 60px;
-      transition: 0.5s;
-    }
-
-    /* Wavy Divider SVG approach */
-    .wavy-panel::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -50px;
-      width: 100px;
-      height: 100%;
-      z-index: 2;
-      background-size: 100% 100%;
-      pointer-events: none;
-    }
-
-    .p-snow {
-      background: linear-gradient(180deg, #00b7ff, #0073ff);
-    }
-
-    .p-foam {
-      background: linear-gradient(180deg, #ff3ea5, #ff0080);
-    }
-
-    .p-bubbles {
-      background: linear-gradient(180deg, #9c27b0, #673ab7);
-    }
-
-    .panel-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 1;
-      transition: transform 0.8s, filter 0.5s;
-      z-index: 0;
-    }
-
-    .wavy-panel:hover .panel-bg {
-      transform: scale(1.1);
-      filter: brightness(1.2) contrast(1.1);
-    }
-
-    /* Fluffy Cloud Header */
-    .cloud-header {
-      background: white;
-      padding: 40px 60px;
-      border-radius: 100px;
-      position: relative;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-
-    .cloud-header::before,
-    .cloud-header::after {
-      content: '';
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    .cloud-header::before {
-      width: 80px;
-      height: 80px;
-      top: -30px;
-      left: 40px;
-    }
-
-    .cloud-header::after {
-      width: 100px;
-      height: 100px;
-      top: -40px;
-      right: 50px;
-    }
-
-    .cloud-header h3 {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 54px;
-      font-weight: 950;
-      margin: 0;
-      line-height: 1;
-    }
-
-    .snow-text {
-      color: #0073ff;
-    }
-
-    .foam-text {
-      color: #ff3ea5;
-    }
-
-    .bubble-text {
-      color: #9c27b0;
-    }
-
-    .party-pill {
-      display: inline-block;
-      padding: 5px 25px;
-      border-radius: 50px;
-      color: white;
-      font-size: 20px;
-      font-weight: 900;
-      margin-top: 10px;
-      text-transform: uppercase;
-    }
-
-    .snow-pill {
-      background: #0073ff;
-    }
-
-    .foam-pill {
-      background: #ff3ea5;
-    }
-
-    .bubble-pill {
-      background: #9c27b0;
-    }
-
-    /* Feature Pills */
-    .feature-list {
-      width: 80%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 5;
-    }
-
-    .f-pill {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 12px 25px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
-    }
-
-    .f-pill:hover {
-      transform: translateX(10px);
-      background: #fff;
-    }
-
-    .f-icon {
-      font-size: 22px;
-    }
-
-    .f-text {
-      font-size: 15px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .snow-f-text {
-      color: #0073ff;
-    }
-
-    .foam-f-text {
-      color: #ff3ea5;
-    }
-
-    .bubble-f-text {
-      color: #9c27b0;
-    }
-
-    /* Mascots */
-    .m-mascot {
-      position: absolute;
-      font-size: 70px;
-      z-index: 15;
-      filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
-    }
-
-    .m-penguin {
-      bottom: -20px;
-      left: -30px;
-    }
-
-    .m-duck {
-      top: -20px;
-      right: -30px;
-    }
-
-    .m-robot {
-      bottom: -20px;
-      right: -30px;
-    }
-
-    /* Floating Items */
-    .float-item {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    /* MASTER CHEF KIDS MENU (IMAGE MATCH) */
-    .kids-menu-board {
-      padding: 0px 0 120px 0;
-      background: #fdf5e6;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Top Lights Decor */
-    .menu-top-lights {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background: url('https://www.transparenttextures.com/patterns/black-linen.png');
-      /* placeholder for string */
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      z-index: 5;
-    }
-
-    .light-bulb {
-      width: 40px;
-      height: 60px;
-      background: #ffeb3b;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 0 20px #ffeb3b;
-      position: relative;
-      animation: bulbGlow 2s infinite alternate;
-    }
-
-    @keyframes bulbGlow {
-      from {
-        opacity: 0.8;
-      }
-
-      to {
-        opacity: 1;
-        box-shadow: 0 0 40px #ffeb3b;
-      }
-    }
-
-    .menu-main-wrap {
-      max-width: 1450px;
-      /* ENLARGED BOARD */
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* 50/50 SPLIT */
-      gap: 80px;
-      /* More breathing room */
-      background: white;
-      padding: 25px 70px;
-      border-radius: 80px;
-      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
-      position: relative;
-      border: 15px solid #fff;
-    }
-
-    /* Left: Chalkboard */
-    .chalkboard-frame {
-      background: #1e2a1e;
-      padding: 30px 17px;
-      border: 20px solid #5d4037;
-      border-radius: 15px;
-      position: relative;
-      background-image: url('https://www.transparenttextures.com/patterns/black-chalk.png');
-      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7), 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .chalkboard-frame h2 {
-      font-family: 'Gochi Hand', cursive;
-      color: rgba(255, 255, 255, 0.95);
-      font-size: 52px;
-      text-align: center;
-      line-height: 0.9;
-      margin-bottom: 45px;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
-      transform: rotate(-2deg);
-      /* Natural tilt */
-    }
-
-    .chalk-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      transform: rotate(0.5deg);
-      /* Slight natural offset */
-    }
-
-    .chalk-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: 'Gochi Hand', cursive;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 24px;
-      /* Slightly adjusted for better chalk look */
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-      padding-bottom: 8px;
-      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.4);
-      letter-spacing: 1px;
-    }
-
-    /* Alternating slight tilts for hand-written feel */
-    .chalk-item:nth-child(even) {
-      transform: rotate(0.3deg);
-    }
-
-    .chalk-item:nth-child(odd) {
-      transform: rotate(-0.3deg);
-    }
-
-    .chalk-item span:first-child {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .chalk-price {
-      color: #ffeb3b;
-      font-weight: 900;
-    }
-
-    /* AUTO-SCROLLING MENU LISTING */
-    .menu-listing-viewport {
-      height: 814px;
-      /* Fixed height for scrolling */
-      overflow: hidden;
-      position: relative;
-      border-radius: 40px;
-      background: #fdfdfd;
-      border: 1px solid #f0f0f0;
-      padding: 20px;
-    }
-
-    .marquee-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      animation: smoothScroll 30s linear infinite;
-    }
-
-    .marquee-wrapper:hover {
-      animation-play-state: paused;
-      /* Stop scrolling on hover */
-    }
-
-    @keyframes smoothScroll {
-      0% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(-50%);
-      }
-
-      /* Scrolls half-way to match duplicated list */
-    }
-
-    .food-list-card {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      padding: 20px;
-      background: white;
-      border-radius: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: 0.4s;
-      border: 2px solid transparent;
-      cursor: pointer;
-    }
-
-    .food-list-card:hover {
-      transform: translateX(15px);
-      border-color: #ff3ea5;
-      box-shadow: 0 15px 40px rgba(255, 62, 165, 0.1);
-    }
-
-    .list-img-box {
-      width: 100px;
-      height: 100px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #fff;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .list-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .list-info-box {
-      flex: 1;
-    }
-
-    .list-info-box h4 {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 22px;
-      color: #d84315;
-      margin-bottom: 5px;
-    }
-
-    .list-info-box p {
-      font-size: 14px;
-      color: #666;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .list-badge {
-      padding: 6px 15px;
-      border-radius: 50px;
-      color: white;
-      font-weight: 900;
-      font-size: 12px;
-      text-transform: uppercase;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Chef Mascot */
-    .chef-mascot-wrap {
-      position: absolute;
-      top: -100px;
-      right: -20px;
-      width: 180px;
-      z-index: 10;
-      animation: mascotFloat 4s infinite ease-in-out;
-    }
-
-    @keyframes mascotFloat {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0);
-      }
-
-      50% {
-        transform: translateY(-15px) rotate(5deg);
-      }
-    }
-
-    @keyframes mascotFloat {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0);
-      }
-
-      50% {
-        transform: translateY(-15px) rotate(5deg);
-      }
-    }
-
-    /* Bottom Decor */
-    .menu-decor-bottom {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 50px;
-      margin-top: 60px;
-    }
-
-    .decor-item {
-      font-size: 100px;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    }
-
-    .kids-banner {
-      background: #00b7ff;
-      color: white;
-      padding: 15px 60px;
-      border-radius: 100px;
-      font-weight: 900;
-      font-size: 24px;
-      box-shadow: 0 10px 30px rgba(0, 183, 255, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    @media (max-width: 1024px) {
-      .menu-main-wrap {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-      }
-
-      .food-grid-visual {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 
   <!-- Highlighted Hygiene & Safety Section -->
   <div class="safety-spotlight">
@@ -2312,79 +497,7 @@
     </div>
   </div>
 
-  <style>
-    .safety-spotlight {
-      background: #f0f9ff;
-      padding: 30px 0;
-      margin: -40px 0 40px;
-      position: relative;
-      z-index: 10;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 183, 255, 0.1);
-      border: 1px solid rgba(0, 183, 255, 0.1);
-    }
 
-    .spotlight-flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .spotlight-item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .s-icon {
-      font-size: 40px;
-      background: white;
-      width: 70px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .s-text h4 {
-      font-size: 18px;
-      font-weight: 950;
-      color: #0b2450;
-      margin-bottom: 2px;
-      letter-spacing: 1px;
-    }
-
-    .s-text p {
-      font-size: 13px;
-      color: #555;
-      font-weight: 700;
-    }
-
-    .spotlight-divider {
-      width: 2px;
-      height: 50px;
-      background: rgba(0, 183, 255, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .spotlight-flex {
-        flex-direction: column;
-        gap: 30px;
-      }
-
-      .spotlight-divider {
-        display: none;
-      }
-
-      .safety-spotlight {
-        margin: 0 0 30px;
-        padding: 40px 20px;
-      }
-    }
-  </style>
   </section>
 
   <!-- Happy Parents & Crowd Section (Minimalist High-Impact) -->
@@ -2393,19 +506,17 @@
       <div class="crowd-hero-box">
         <!-- Large Image Area -->
         <div class="crowd-img-large">
-          <img
-            src="https://plus.unsplash.com/premium_photo-1686920244610-55ebbc268b9b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3VtbWVyJTIwY2FtcHxlbnwwfHwwfHx8MA%3D%3D"
-            alt="Summer Camp Fun">
+          <img src="birthday.png" alt="Summer Camp Fun">
           <div class="live-status">
             <span class="live-dot"></span> 500+ FAMILIES TODAY
           </div>
 
           <!-- Minimal Content Overlay -->
           <div class="crowd-overlay-content">
-            <h2 class="hero-title-light">HAPPY PARENTS, <br><span>UNSTOPPABLE KIDS!</span></h2>
+            <h2 class="hero-title-light">BIRTHDAY, <br><span>POOL PARTY!</span></h2>
             <div class="mini-testimonial">
-              <p>“The safest & most fun weekend we've ever had!”</p>
-              <b>— THE RODRIGUEZ FAMILY</b>
+              <p>Celebrate birthdays with games, food, music & poolside memories.</p>
+              <b>Make your kids birthdays extra special with a fun-filled poolside celebration. </b>
             </div>
           </div>
         </div>
@@ -2413,378 +524,6 @@
     </div>
   </section>
 
-  <style>
-    .crowd-section-minimal {
-      padding: 60px 0;
-      background: white;
-    }
-
-    .crowd-hero-box {
-      position: relative;
-      border-radius: 40px;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-    }
-
-    .crowd-img-large {
-      position: relative;
-      width: 100%;
-      height: 650px;
-    }
-
-    .crowd-img-large img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 1s ease-in-out;
-    }
-
-    .crowd-hero-box:hover .crowd-img-large img {
-      transform: scale(1.05);
-    }
-
-    /* Live Badge */
-    .live-status {
-      position: absolute;
-      top: 40px;
-      right: 40px;
-      background: rgba(255, 62, 165, 0.95);
-      color: white;
-      padding: 12px 25px;
-      border-radius: 50px;
-      font-weight: 900;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      backdrop-filter: blur(10px);
-      z-index: 5;
-    }
-
-    .live-dot {
-      width: 10px;
-      height: 10px;
-      background: white;
-      border-radius: 50%;
-      animation: blink 1.2s infinite;
-    }
-
-    /* Overlay Content */
-    .crowd-overlay-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 80px 60px 60px;
-      background: linear-gradient(to top, rgba(11, 36, 80, 0.9) 0%, rgba(11, 36, 80, 0) 100%);
-      color: white;
-      text-align: left;
-    }
-
-    .hero-title-light {
-      font-size: 64px;
-      font-weight: 950;
-      line-height: 1;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-
-    .hero-title-light span {
-      color: #00b7ff;
-    }
-
-    .mini-testimonial {
-      border-left: 4px solid #ff3ea5;
-      padding-left: 25px;
-      max-width: 500px;
-    }
-
-    .mini-testimonial p {
-      font-size: 20px;
-      font-weight: 700;
-      font-style: italic;
-      margin-bottom: 8px;
-    }
-
-    .mini-testimonial b {
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #00b7ff;
-      opacity: 0.9;
-    }
-
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.5;
-        transform: scale(0.8);
-      }
-    }
-
-    @media (max-width: 1024px) {
-      .crowd-img-large {
-        height: 500px;
-      }
-
-      .hero-title-light {
-        font-size: 42px;
-      }
-
-      .crowd-overlay-content {
-        padding: 40px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .crowd-img-large {
-        height: 400px;
-      }
-
-      .hero-title-light {
-        font-size: 32px;
-      }
-
-      .live-status {
-        top: 20px;
-        right: 20px;
-        padding: 8px 15px;
-        font-size: 11px;
-      }
-
-      .mini-testimonial p {
-        font-size: 16px;
-      }
-    }
-  </style>
-
-  <style>
-    .food-final {
-      background: #fff8e1;
-      padding: 100px 0 0;
-      position: relative;
-    }
-
-    .food-banner-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      margin-bottom: 0px;
-    }
-
-    .char-left,
-    .char-right {
-      font-size: 100px;
-      animation: float-char 3s ease-in-out infinite;
-    }
-
-    @keyframes float-char {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-20px);
-      }
-    }
-
-    .food-main-title {
-      text-align: center;
-    }
-
-    .bubbly-text {
-      font-size: 82px;
-      font-weight: 950;
-      color: #0b2450;
-      line-height: 0.9;
-      margin-bottom: 20px;
-      letter-spacing: -2px;
-    }
-
-    .bubbly-text span {
-      color: #ff3ea5;
-    }
-
-    .ribbon-banner {
-      background: #ffcf24;
-      color: #0b2450;
-      padding: 8px 40px;
-      font-weight: 800;
-      font-size: 20px;
-      display: inline-block;
-      border-radius: 5px;
-      box-shadow: 0 5px 0 #e6b800;
-      margin-bottom: 15px;
-    }
-
-    .sub-tags {
-      font-weight: 800;
-      color: #00b7ff;
-      font-size: 18px;
-    }
-
-    .food-grid-final {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 15px;
-      padding-bottom: 100px;
-    }
-
-    .food-card-final {
-      background: white;
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .food-card-final:hover {
-      transform: translateY(-10px);
-    }
-
-    .food-img-wrapper {
-      padding: 20px;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .food-img-wrapper.orange {
-      background: #fff4e5;
-    }
-
-    .food-img-wrapper.pink {
-      background: #ffebf5;
-    }
-
-    .food-img-wrapper.blue {
-      background: #e8f9ff;
-    }
-
-    .food-img-wrapper.green {
-      background: #eefdf4;
-    }
-
-    .food-img-wrapper.purple {
-      background: #f5ebff;
-    }
-
-    .food-img-wrapper.yellow {
-      background: #fffbe6;
-    }
-
-    .food-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .food-details {
-      padding: 15px 10px;
-    }
-
-    .food-details h4 {
-      font-size: 14px;
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
-
-    .food-details p {
-      font-size: 11px;
-      font-weight: 700;
-      color: #777;
-      margin-bottom: 15px;
-    }
-
-    .food-footer {
-      font-size: 10px;
-      font-weight: 800;
-      padding-top: 10px;
-      border-top: 1px solid #eee;
-    }
-
-    .food-footer.orange {
-      color: #ff9d00;
-    }
-
-    .food-footer.pink {
-      color: #ff3ea5;
-    }
-
-    .food-footer.blue {
-      color: #00b7ff;
-    }
-
-    .food-trust-bar {
-      background: #00b7ff;
-      padding: 50px 0;
-      border-radius: 50% 50% 0 0 / 40px 40px 0 0;
-      color: white;
-    }
-
-    .trust-grid-final {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    .trust-item-final {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .trust-icon-final {
-      background: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-
-    .trust-text-final h5 {
-      font-size: 14px;
-      font-weight: 900;
-      margin-bottom: 2px;
-    }
-
-    .trust-text-final p {
-      font-size: 11px;
-      font-weight: 700;
-      opacity: 0.9;
-      line-height: 1.2;
-    }
-
-    @media (max-width: 1200px) {
-      .food-grid-final {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .trust-grid-final {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .char-left,
-      .char-right {
-        display: none;
-      }
-    }
-  </style>
 
   <section class="private-pool">
     <div class="container pool-flex">
@@ -2802,14 +541,15 @@
       <div class="pool-text">
         <div class="title-with-crown">
           <span class="crown-icon">👑</span>
-          <h2>PRIVATE POOL EXPERIENCE</h2>
+          <h2>Private Pool Party</h2>
         </div>
-        <p>Enjoy a safe & relaxing time in our private pools - just for you and your little ones!</p>
+        <p>Enjoy exclusive pool time with family & friends in a fun, safe, and relaxing atmosphere.</p>
         <ul class="pool-features">
-          <li>Clean & Hygienic</li>
-          <li>Privacy for Your Family</li>
-          <li>Lifeguard Supervision</li>
-          <li>Comfortable Seating Area</li>
+          <li>Private pool access for your group</li>
+          <li>Fun games & music by the poolside</li>
+          <li>Delicious food & refreshing beverages</li>
+          <li>Safe and family-friendly environment</li>
+          <li>Perfect for weekend get-togethers & celebrations</li>
         </ul>
       </div>
 
@@ -2828,6 +568,7 @@
         </div>
       </div>
     </div>
+
 
     <div class="trust-bar-wavy">
       <div class="container trust-flex">
@@ -2870,210 +611,8 @@
     </div>
   </section>
 
-  <style>
-    .private-pool {
-      background: #e8f9ff;
-      padding: 80px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
 
-    .pool-flex {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      padding-bottom: 80px;
-    }
 
-    .pool-images {
-      flex: 1.2;
-    }
-
-    .pool-main-container {
-      position: relative;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .pool-overlay-text {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .pool-overlay-text span {
-      display: block;
-      font-size: 42px;
-      font-weight: 900;
-      line-height: 0.9;
-      font-family: 'Fredoka', sans-serif;
-    }
-
-    .pool-overlay-text span:nth-child(1) {
-      color: #ff3ea5;
-    }
-
-    .pool-overlay-text span:nth-child(2) {
-      color: #00b7ff;
-    }
-
-    .pool-overlay-text small {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .pool-text {
-      flex: 1;
-    }
-
-    .title-with-crown {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .crown-icon {
-      font-size: 32px;
-      filter: drop-shadow(0 5px 10px rgba(255, 207, 36, 0.4));
-    }
-
-    .pool-text h2 {
-      font-size: 32px;
-      color: #0b2450;
-      margin: 0;
-    }
-
-    .pool-features li::before {
-      background: #ffcf24 !important;
-    }
-
-    .pool-polaroids {
-      flex: 1;
-      position: relative;
-      height: 400px;
-    }
-
-    .polaroid {
-      position: absolute;
-      background: white;
-      padding: 10px 10px 35px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      width: 220px;
-      transition: 0.3s;
-    }
-
-    .polaroid img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-
-    .p1 {
-      transform: rotate(-5deg);
-      left: 0;
-      top: 20px;
-      z-index: 2;
-    }
-
-    .p2 {
-      transform: rotate(8deg);
-      right: 0;
-      top: 80px;
-      z-index: 1;
-    }
-
-    .pool-decor {
-      position: absolute;
-      bottom: 20px;
-      right: 0;
-      z-index: 3;
-      display: flex;
-      gap: 10px;
-    }
-
-    .coconut,
-    .cocktail {
-      font-size: 50px;
-      filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
-    }
-
-    .trust-bar-wavy {
-      background: white;
-      padding: 40px 0 60px;
-      position: relative;
-      z-index: 5;
-      margin-top: -30px;
-      border-radius: 50% 50% 0 0 / 30px 30px 0 0;
-    }
-
-    .trust-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .trust-icon-circle {
-      width: 60px;
-      height: 60px;
-      background: #00b7ff;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 10px 20px rgba(0, 183, 255, 0.3);
-    }
-
-    .trust-info span {
-      display: block;
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 1;
-      color: #0b2450;
-    }
-
-    .trust-info small {
-      font-weight: 700;
-      font-size: 11px;
-      color: #555;
-    }
-
-    @media (max-width: 1200px) {
-      .pool-flex {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .title-with-crown {
-        justify-content: center;
-      }
-
-      .pool-polaroids {
-        height: 350px;
-        width: 500px;
-        margin: 0 auto;
-      }
-
-      .trust-flex {
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-      }
-    }
-  </style>
 
   <section class="gallery-creative" id="gallery">
     <!-- Background Elements -->
@@ -3186,398 +725,7 @@
     </div>
   </section>
 
-  <style>
-    .gallery-creative {
-      padding: 120px 0 150px;
-      background: linear-gradient(180deg, #f0fbff 0%, #ffffff 100%);
-      position: relative;
-      overflow: hidden;
-    }
 
-    .gallery-header-final {
-      text-align: center;
-      margin-bottom: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .title-wrap-final {
-      position: relative;
-      display: inline-block;
-    }
-
-    .splash-bubbly {
-      font-family: 'Fredoka', sans-serif;
-      font-size: clamp(60px, 12vw, 130px);
-      color: #38b6ff;
-      line-height: 0.9;
-      text-shadow:
-        -4px -4px 0 #0b2450,
-        4px -4px 0 #0b2450,
-        -4px 4px 0 #0b2450,
-        4px 4px 0 #0b2450,
-        0px 10px 0 #0b2450;
-      position: relative;
-    }
-
-    .splash-bubbly span {
-      display: block;
-      color: #ff3ea5;
-      font-size: 0.35em;
-      letter-spacing: 12px;
-      margin-top: 5px;
-      text-shadow: none;
-      font-weight: 800;
-      position: relative;
-    }
-
-    .splash-bubbly span::before,
-    .splash-bubbly span::after {
-      content: '•';
-      position: absolute;
-      top: 0;
-      font-size: 1.5em;
-    }
-
-    .splash-bubbly span::before {
-      left: -10px;
-    }
-
-    .splash-bubbly span::after {
-      right: -10px;
-    }
-
-    .splash-drops {
-      position: absolute;
-      font-size: 50px;
-      top: -30px;
-      right: -60px;
-      animation: drip 3s infinite ease-in-out;
-    }
-
-    @keyframes drip {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0);
-      }
-
-      50% {
-        transform: translateY(-10px) rotate(15deg);
-      }
-    }
-
-    .blue-ribbon {
-      margin: 40px auto 0;
-      background: linear-gradient(to right, #0073ff, #00b7ff, #0073ff);
-      color: white;
-      padding: 15px 50px;
-      display: inline-block;
-      border-radius: 50px;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: 1px;
-      box-shadow: 0 10px 20px rgba(0, 115, 255, 0.3);
-      position: relative;
-    }
-
-    .ribbon-text {
-      position: relative;
-    }
-
-    .ribbon-text::before,
-    .ribbon-text::after {
-      content: '⚡';
-      margin: 0 10px;
-      font-size: 12px;
-    }
-
-    .moments-grid-creative {
-      position: relative;
-      height: 950px;
-      margin: 40px auto 80px;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .m-card {
-      position: absolute;
-      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .p-frame {
-      background: white;
-      padding: 15px 15px 50px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      position: relative;
-    }
-
-    .p-frame img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 2px;
-      display: block;
-    }
-
-    .p-info {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 20px;
-      color: #0b2450;
-      margin-top: 20px;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    .h-icon {
-      color: #ff3ea5;
-      font-size: 22px;
-    }
-
-    .blue-h {
-      color: #00b7ff;
-    }
-
-    .c-icon {
-      position: absolute;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      background: white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-      border: 4px solid #fff;
-    }
-
-    .sun-bg {
-      background: #ffeaa7 !important;
-    }
-
-    .pink-bg {
-      background: #fd79a8 !important;
-    }
-
-    .purple-bg {
-      background: #a29bfe !important;
-    }
-
-    .green-bg {
-      background: #55efc4 !important;
-    }
-
-    .blue-bg {
-      background: #74b9ff !important;
-    }
-
-    .orange-bg {
-      background: #fab1a0 !important;
-    }
-
-    /* Refined Positions for 8 Images (2 Rows of 4) */
-    .mc-1 {
-      top: 0;
-      left: 0;
-      transform: rotate(-4deg);
-    }
-
-    .mc-1 .c-icon {
-      top: -20px;
-      left: -20px;
-    }
-
-    .mc-2 {
-      top: 40px;
-      left: 25%;
-      transform: rotate(5deg);
-    }
-
-    .mc-2 .c-icon {
-      top: -20px;
-      right: -20px;
-    }
-
-    .mc-7 {
-      top: -20px;
-      left: 50%;
-      transform: rotate(-3deg);
-    }
-
-    .mc-7 .c-icon {
-      top: -20px;
-      left: -20px;
-    }
-
-    .mc-8 {
-      top: 30px;
-      right: 0;
-      transform: rotate(6deg);
-    }
-
-    .mc-8 .c-icon {
-      top: -20px;
-      right: -20px;
-    }
-
-    .mc-3 {
-      top: 480px;
-      left: 0;
-      transform: rotate(6deg);
-    }
-
-    .mc-3 .c-icon {
-      top: -20px;
-      left: -20px;
-    }
-
-    .mc-4 {
-      top: 520px;
-      left: 26%;
-      transform: rotate(-3deg);
-    }
-
-    .mc-4 .c-icon {
-      top: -20px;
-      right: -20px;
-    }
-
-    .mc-5 {
-      top: 450px;
-      left: 52%;
-      transform: rotate(4deg);
-    }
-
-    .mc-5 .c-icon {
-      top: -20px;
-      left: -20px;
-    }
-
-    .mc-6 {
-      top: 500px;
-      right: 0;
-      transform: rotate(-5deg);
-    }
-
-    .mc-6 .c-icon {
-      top: -20px;
-      right: -20px;
-    }
-
-    .m-card:hover {
-      transform: scale(1.08) rotate(0deg) !important;
-      z-index: 20;
-    }
-
-    .btn-more-final {
-      background: linear-gradient(135deg, #ff3ea5, #ff7a00);
-      color: white;
-      padding: 20px 50px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      box-shadow: 0 15px 30px rgba(255, 62, 165, 0.4);
-      transition: 0.3s;
-    }
-
-    .btn-more-final:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(255, 62, 165, 0.5);
-    }
-
-    .decor-foliage {
-      position: absolute;
-      font-size: 140px;
-      opacity: 0.12;
-      pointer-events: none;
-    }
-
-    .leaf-tl {
-      top: -20px;
-      left: -40px;
-      transform: rotate(45deg);
-    }
-
-    .leaf-tr {
-      top: 5%;
-      right: -50px;
-      transform: rotate(-30deg);
-    }
-
-    .leaf-bl {
-      bottom: 10%;
-      left: -40px;
-    }
-
-    .leaf-br {
-      bottom: -20px;
-      right: -40px;
-    }
-
-    .decor-star {
-      position: absolute;
-      font-size: 30px;
-      color: #ffcf24;
-      opacity: 0.4;
-    }
-
-    .s1 {
-      top: 15%;
-      left: 10%;
-    }
-
-    .s2 {
-      top: 40%;
-      right: 10%;
-    }
-
-    .decor-dot {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      opacity: 0.3;
-    }
-
-    .d1 {
-      background: #38b6ff;
-      top: 20%;
-      right: 15%;
-    }
-
-    .d2 {
-      background: #ff3ea5;
-      bottom: 20%;
-      left: 15%;
-    }
-
-    @media (max-width: 1024px) {
-      .moments-grid-creative {
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-      }
-
-      .m-card {
-        position: relative;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        transform: none !important;
-      }
-    }
-  </style>
 
   <section class="footer-cta">
     <div class="bubble b1"></div>
@@ -3585,12 +733,13 @@
     <div class="bubble b3"></div>
     <div class="bubble b4"></div>
     <div class="container">
-      <h2>READY FOR A SPLASHING GOOD TIME?</h2>
-      <p style="margin-bottom: 40px; font-size: 18px; opacity: 0.8;">Limited Slots Available - Book Now & Dive Into Fun!
-      </p>
+      <h2>Are You Ready for the Biggest Splash?</h2>
+      <p class="final-cta-p">Book your tickets now & make this summer
+        unforgettable for your little ones!</p>
       <a href="#" class="main-cta">BOOK NOW ➔</a>
     </div>
   </section>
+
 
 </body>
 
