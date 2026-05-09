@@ -1763,6 +1763,10 @@
      margin-top: .3rem;
  }
 
+ .p-frame p {
+     text-align: center;
+ }
+
  .snow-pill {
      background: #0073ff;
  }
