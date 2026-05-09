@@ -437,10 +437,10 @@
 
  /* HERO */
  .hero {
-     padding: 60px 0 100px;
+     padding: 60px 0 20px;
      position: relative;
      background: url('banner.png') no-repeat center center/cover;
-     min-height: 850px;
+     min-height: 734px;
      display: flex;
      align-items: center;
      border-radius: 0 0 100px 100px;
@@ -1765,6 +1765,7 @@
 
  .p-frame p {
      text-align: center;
+     color: #666161;
  }
 
  .snow-pill {
@@ -2909,10 +2910,28 @@
  }
 
  .gallery-creative {
-     padding: 120px 0 150px;
-     background: linear-gradient(180deg, #f0fbff 0%, #ffffff 100%);
+     padding: 106px 0 96px;
+     background: linear-gradient(180deg, rgb(171 232 255 / 85%) 0%, rgb(255 255 255 / 95%) 100%), url(https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2000&auto=format&fit=crop);
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
      position: relative;
      overflow: hidden;
+     color: var(--dark);
+ }
+
+ .gallery-creative::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-image: url('https://www.transparenttextures.com/patterns/water.png');
+     opacity: 0.1;
+     /* More visible on light background */
+     pointer-events: none;
+     z-index: 1;
  }
 
  .gallery-header-final {
@@ -2930,7 +2949,7 @@
 
  .splash-bubbly {
      font-family: 'Fredoka', sans-serif;
-     font-size: clamp(60px, 12vw, 130px);
+     font-size: clamp(60px, 12vw, 115px);
      color: #38b6ff;
      line-height: 0.9;
      text-shadow:
@@ -3272,12 +3291,53 @@
      background: #38b6ff;
      top: 20%;
      right: 15%;
+     animation: float-dot 4s infinite ease-in-out;
  }
 
  .d2 {
      background: #ff3ea5;
      bottom: 20%;
      left: 15%;
+     animation: float-dot 5s infinite ease-in-out reverse;
+ }
+
+ .d3 {
+     background: #ffcf24;
+     top: 60%;
+     right: 10%;
+     width: 25px;
+     height: 25px;
+     animation: float-dot 6s infinite ease-in-out;
+ }
+
+ .d4 {
+     background: #00b7ff;
+     top: 10%;
+     left: 40%;
+     width: 10px;
+     height: 10px;
+     animation: float-dot 3s infinite ease-in-out;
+ }
+
+ .d5 {
+     background: #ff3ea5;
+     bottom: 10%;
+     right: 40%;
+     width: 20px;
+     height: 20px;
+     animation: float-dot 7s infinite ease-in-out reverse;
+ }
+
+ @keyframes float-dot {
+
+     0%,
+     100% {
+         transform: translateY(0) scale(1);
+     }
+
+     50% {
+         transform: translateY(-30px) scale(1.2);
+     }
  }
 
  @media (max-width: 1024px) {
