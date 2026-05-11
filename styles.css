@@ -1204,6 +1204,36 @@ html,
          display: none;
      }
 
+    .hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .hero-tag {
+        order: 0;
+    }
+
+    .hero h1 {
+        order: 1;
+    }
+
+    .timing-highlight {
+        display: inline-flex !important;
+        order: 2;
+        margin: 10px 0 18px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero .hero-content > p {
+        display: none;
+    }
+
+    .hero .main-cta {
+        order: 3;
+    }
+
      .wave {
          bottom: 49px;
      }
@@ -3415,6 +3445,60 @@ html,
      padding-bottom: 5px;
  }
 
+.squad-price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: -10px 0 22px;
+}
+
+.squad-price-badge {
+    background: #ffcf24;
+    color: #0b2450;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 950;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    box-shadow: 6px 6px 0 rgba(255, 62, 165, 0.18);
+}
+
+.squad-price-note {
+    font-size: 12px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.squad-addon-prices {
+    margin: -6px 0 22px;
+    display: grid;
+    gap: 8px;
+}
+
+.squad-addon-prices .addon-line {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.squad-addon-prices .addon-note {
+    font-weight: 900;
+    color: rgba(0, 183, 255, 0.95);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+}
+
+.squad-tnc-note {
+    margin: -10px 0 18px;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+}
+
  .s-icon-wrap {
      font-size: 32px;
      background: rgba(255, 255, 255, 0.1);
@@ -3571,6 +3655,9 @@ html,
      .comic-panel {
          transform: none !important;
      }
+     .comic-decor-burst{
+        display: none;
+    }
  }
 
  .coconut,
