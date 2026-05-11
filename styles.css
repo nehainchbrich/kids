@@ -1154,7 +1154,11 @@
 
  @media (max-width: 1024px) {
      .hero h1 {
-         font-size: 56px;
+         font-size: 30px;
+     }
+
+     .hero-content {
+         max-width: 100%;
      }
 
      .activities-grid {
@@ -1169,6 +1173,10 @@
  @media (max-width: 768px) {
      .nav-links {
          display: none;
+     }
+
+     .wave {
+         bottom: 49px;
      }
 
      .hero {
@@ -4190,26 +4198,27 @@
  .social-btn.whatsapp {
      background-color: #25D366;
  }
- 
+
  @media (max-width: 768px) {
      .fixed-socials {
          bottom: 15px;
          right: 15px;
          gap: 10px;
      }
-     
+
      .social-btn {
          width: 45px;
          height: 45px;
      }
-     
+
      .social-btn svg {
          width: 22px;
          height: 22px;
      }
-     
+
      .social-btn:hover {
-         transform: scale(1.05); /* Less transform on touch devices */
+         transform: scale(1.05);
+         /* Less transform on touch devices */
      }
  }
 
@@ -4284,58 +4293,58 @@
      border-radius: 0 20px 20px 0;
      border-left: 5px solid #ff3ea5;
  }
-/* Responsive for Trio Section */
-@media (max-width: 991px) {
-    .magic-trio .container {
-        max-width: 100%;
-        padding: 0;
-    }
-    
-    .magic-trio {
-        padding: 60px 0;
-        overflow: hidden;
-    }
 
-    .wavy-container {
-        height: auto !important;
-        display: flex !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        padding: 20px 20px 40px !important;
-        gap: 20px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
+ /* Responsive for Trio Section */
+ @media (max-width: 991px) {
+     .magic-trio .container {
+         max-width: 100%;
+         padding: 0;
+     }
 
-    .wavy-container::-webkit-scrollbar {
-        display: none;
-    }
+     .magic-trio {
+         padding: 60px 0;
+         overflow: hidden;
+     }
 
-    .wavy-panel {
-        flex: 0 0 85% !important;
-        height: 500px !important;
-        border-radius: 40px;
-        scroll-snap-align: center;
-        padding-bottom: 40px;
-        flex-shrink: 0;
-        overflow: hidden;
-    }
+     .wavy-container {
+         height: auto !important;
+         display: flex !important;
+         overflow-x: auto !important;
+         scroll-snap-type: x mandatory;
+         padding: 20px 20px 40px !important;
+         gap: 20px;
+         -webkit-overflow-scrolling: touch;
+         scrollbar-width: none;
+     }
 
-    .wavy-panel::after {
-        display: none !important;
-    }
+     .wavy-container::-webkit-scrollbar {
+         display: none;
+     }
 
-    .cloud-header {
-        padding: 25px 30px !important;
-        width: 85% !important;
-    }
+     .wavy-panel {
+         flex: 0 0 85% !important;
+         height: 500px !important;
+         border-radius: 40px;
+         scroll-snap-align: center;
+         padding-bottom: 40px;
+         flex-shrink: 0;
+         overflow: hidden;
+     }
 
-    .cloud-header h3 {
-        font-size: 28px !important;
-    }
+     .wavy-panel::after {
+         display: none !important;
+     }
 
-    .m-mascot {
-        font-size: 40px !important;
-    }
-}
+     .cloud-header {
+         padding: 25px 30px !important;
+         width: 85% !important;
+     }
 
+     .cloud-header h3 {
+         font-size: 28px !important;
+     }
+
+     .m-mascot {
+         font-size: 40px !important;
+     }
+ }
