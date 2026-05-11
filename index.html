@@ -15,6 +15,14 @@
 
 <body>
 
+  <!-- Chalk Filter -->
+  <svg style="display:none;">
+    <filter id="chalk-effect">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="5" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" />
+    </filter>
+  </svg>
+
   <!-- Full Page Particle Animations -->
   <div class="full-page-particles" aria-hidden="true">
     <div class="particle bubble bubble-pink pb-1"></div>
@@ -89,7 +97,7 @@
           </div>
         </div> -->
 
-        <a href="#" class="main-cta">BOOK YOUR SPLASH DAY ></a>
+        <a href="#" class="main-cta">BOOK YOUR SPLASH DAY</a>
       </div>
     </div>
   </section>
@@ -369,7 +377,15 @@
     <div class="container">
       <div class="section-header header-dark">
         <span class="header-badge">THE ULTIMATE FOOD FESTIVAL</span>
-        <h2>Bachaa Party <span class="text-gradient">Treats</span></h2>
+        <div class="header-main-title">
+          <div class="header-decor decor-left shake-anim">
+            <img src="coconut.png" alt="Coconut Icon">
+          </div>
+          <h2>Bachaa Party <span class="text-gradient">Treats</span></h2>
+          <div class="header-decor decor-right shake-anim">
+            <img src="shake.png" alt="Milkshake Icon">
+          </div>
+        </div>
         <div class="header-line"></div>
         <p class="section-subtitle">A culinary splash for the whole family! Explore our curated party zones.</p>
       </div>
@@ -481,8 +497,19 @@
           <div class="zone-doodle">🕶️</div>
         </div>
         <!-- CTA Button -->
-        <div class="menu-cta-wrap">
+        <div class="menu-cta-wrap mt-0">
           <a href="#" class="main-cta">BOOK YOUR TICKETS NOW ➔</a>
+        </div>
+
+        <!-- Big Corner Decor (Overlapping Duo) -->
+        <div class="board-corner-decor">
+          <img src="shake.png" alt="Big Milkshake">
+        </div>
+        <div class="board-corner-extra">
+          <img src="coconut.png" alt="Big Coconut">
+        </div>
+        <div class="board-corner-pizza">
+          <img src="pizza.png" alt="Big Pizza">
         </div>
       </div>
     </div>
