@@ -1089,10 +1089,12 @@ html,
      position: relative;
      overflow: hidden;
  }
-
+.final-cta-p{
+    margin-bottom: 1rem;
+}
  .footer-cta h2 {
      font-size: 52px;
-     margin-bottom: 30px;
+     margin-bottom: 5px;
  }
 
  .footer-cta .main-cta {
@@ -3353,16 +3355,16 @@ html,
  }
 
  .comic-decor-burst {
-     position: absolute;
-     top: -20px;
-     right: 15%;
-     background: #ff3ea5;
-     color: white;
-     font-weight: 900;
-     padding: 15px 25px;
-     font-size: 24px;
-     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-     animation: popScale 2s infinite ease-in-out;
+    position: absolute;
+    top: -20px;
+    right: 15%;
+    background: #ff3ea5;
+    color: white;
+    font-weight: 900;
+    padding: 29px 47px;
+    font-size: 11px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: popScale 2s infinite ease-in-out;
  }
 
  @keyframes popScale {
@@ -3417,6 +3419,7 @@ html,
      border: 4px solid #0b2450;
      padding: 40px 30px;
      height: 100%;
+     padding-bottom: 1.5rem;
      position: relative;
      box-shadow: 15px 15px 0 rgba(0, 183, 255, 0.1);
      display: flex;
@@ -3476,7 +3479,7 @@ html,
 .squad-addon-prices {
     margin: 0 0 16px;
     display: grid;
-    gap: 8px;
+    gap: 3px;
 }
 
 .squad-addon-prices .addon-line {
@@ -3491,13 +3494,6 @@ html,
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 0.6px;
-}
-
-.squad-tnc-note {
-    margin: 10px 0 0;
-    font-size: 12px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.75);
 }
 
 .squad-family-base {
@@ -3538,16 +3534,6 @@ html,
     display: inline-block;
     margin: 6px 0 10px;
     align-self: flex-start;
-}
-
-.s-text-wrap .s-fineprint {
-    font-size: 12px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.62);
-    margin: 10px 0 0 !important;
-    line-height: 1.35;
-    width: 100%;
-    box-sizing: border-box;
 }
 
  .s-icon-wrap {
@@ -3603,8 +3589,19 @@ html,
      box-sizing: border-box;
  }
 
+.panel-footer-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+    margin-top: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
  .panel-footer-decor {
-     margin-top: 40px;
+     margin-top: 0;
      font-weight: 950;
      font-size: 20px;
      font-style: italic;
@@ -3612,7 +3609,22 @@ html,
      opacity: 0.5;
      text-align: right;
      color: #ffcf24;
+     flex: 0 0 auto;
+     white-space: nowrap;
  }
+
+.panel-bottom-tnc {
+    margin: 0;
+    padding: 0 8px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.35;
+    text-align: left;
+    flex: 1 1 auto;
+    min-width: 0;
+    box-sizing: border-box;
+}
 
  /* Theme Colors */
  .p-dad .panel-heading {
