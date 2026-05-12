@@ -1216,12 +1216,13 @@ html,
 
     .hero h1 {
         order: 1;
+        margin-bottom: 3px;
     }
 
     .timing-highlight {
         display: inline-flex !important;
         order: 2;
-        margin: 10px 0 18px;
+        margin: 16px 0;
         justify-content: center;
         text-align: center;
     }
@@ -3473,7 +3474,7 @@ html,
 }
 
 .squad-addon-prices {
-    margin: -6px 0 22px;
+    margin: 0 0 16px;
     display: grid;
     gap: 8px;
 }
@@ -3493,10 +3494,48 @@ html,
 }
 
 .squad-tnc-note {
-    margin: -10px 0 18px;
+    margin: 10px 0 0;
     font-size: 12px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.75);
+}
+
+.squad-family-base {
+    margin: 8px 0 20px;
+}
+
+.squad-addon-heading {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 950;
+    color: #ffcf24;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.panel-squads {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 4px;
+}
+
+.squad-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.s-text-wrap .squad-tier-price {
+    margin: 6px 0 12px;
+}
+
+.s-text-wrap .s-fineprint {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.62);
+    margin: 10px 0 0 !important;
+    line-height: 1.35;
 }
 
  .s-icon-wrap {
