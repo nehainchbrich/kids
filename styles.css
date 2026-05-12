@@ -3526,8 +3526,18 @@ html,
     align-items: flex-start;
 }
 
+.s-text-wrap {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .s-text-wrap .squad-tier-price {
-    margin: 6px 0 12px;
+    display: inline-block;
+    margin: 6px 0 10px;
+    align-self: flex-start;
 }
 
 .s-text-wrap .s-fineprint {
@@ -3536,6 +3546,8 @@ html,
     color: rgba(255, 255, 255, 0.62);
     margin: 10px 0 0 !important;
     line-height: 1.35;
+    width: 100%;
+    box-sizing: border-box;
 }
 
  .s-icon-wrap {
@@ -3564,6 +3576,8 @@ html,
      font-weight: 900;
      margin-bottom: 5px;
      color: #ffffff;
+     width: 100%;
+     box-sizing: border-box;
  }
 
  .s-badge {
@@ -3575,11 +3589,18 @@ html,
      margin-bottom: 5px;
  }
 
+.s-text-wrap .s-badge {
+    width: 100%;
+    box-sizing: border-box;
+}
+
  .s-text-wrap p {
      font-size: 14px;
      color: rgba(255, 255, 255, 0.7);
      line-height: 1.4;
      margin: 0;
+     width: 100%;
+     box-sizing: border-box;
  }
 
  .panel-footer-decor {
